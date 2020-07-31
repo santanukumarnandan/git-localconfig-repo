@@ -1,0 +1,242 @@
+<html>
+<head>
+    <title>Halfords Critical Business Flow Dashboard. The list includes complete set of key measures which are mentioned below</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <script src="/js/salesVolumeAngularJsApp.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+<style>
+body {
+	background-image: url("images/background.png");
+	background-size: cover;
+    background-repeat:no-repeat;
+} 
+
+.header {
+	background-color: #000;
+	height: auto;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+#content_heading{
+	font-size: 30px;
+}
+.wrapword {
+	white-space: -moz-pre-wrap !important;
+	white-space: -webkit-pre-wrap;
+	white-space: -pre-wrap;
+	white-space: -o-pre-wrap;
+	white-space: pre-wrap;
+	word-wrap: break-word;
+	word-break: break-all;
+	white-space: normal;
+}
+
+.wrap {
+    width: 100%;
+}
+
+.wrap table {
+    width: 100%;
+    table-layout: fixed;
+	
+}
+.inner_table {
+    height: 425px;
+    overflow-y: auto;
+}
+::-webkit-scrollbar { width: 3 !important }
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey; 
+  border-radius: 10px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #000; 
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #b30000; 
+}
+
+
+.heading_table{
+	height: 50px;
+}
+.heading_table td{
+	text-align: center; 
+	font-weight: bold;
+}
+.inner_table table tr td, .heading_table tr td{
+	width: 100px;
+	cellpadding: 2px;
+	cellspacing: 2px;
+}
+
+.halfords{
+	width: 90px; 
+	height: 60px;
+	float: left;
+	padding: 5px;
+	margin: 2px;
+	min-height: 50px;
+	min-width: 50px;
+}
+.panel-body{
+	padding: 2px;
+}
+
+.col-md-10{
+	padding-right: 0;
+	float:left;
+}
+
+.col-md-2{
+	float:left;
+}
+
+.update_panel_body{
+	height:260px;
+	overflow-y: auto;
+}
+
+.list-group-item {
+	padding: 5px 2px;
+}
+
+
+</style>
+</head>
+ 
+<body>
+	
+	<div layout="row" layout-align="center center">
+		<div class="header container-fluid" style="padding:0;">
+			<div class="container-fluid">
+				<div class="logo">
+					<img src="images/logo.png">
+				</div>
+			</div>
+		</div>
+		<br>
+			<div id="content_heading" align="center"; style="background-color:white;">Halfords Critical Business Flow Dashboard. The list includes complete set of key measures which are mentioned below</div>
+					<div id="content_heading" align="center"; style="background-color:orange;">Overall Key Measure Summary</div>
+		<div class="container-fluid">
+			<div class="row" style="clear:both">
+				<div class="col-md-10">
+				
+					
+					<!------Main Table-------->
+					<div class="container-fluid" ng-app="app" ng-controller="jsaController" style="padding:0;">
+						
+							<div class="wrap">
+								  <table class="heading_table table-bordered" >
+									<tr>
+										<td bgcolor="lightgreen" scope="col">Key Measures</td>
+										<td bgcolor="lightgreen" scope="col">MS#1</td>
+										<td bgcolor="lightgreen" scope="col">MS#2</td>
+										<td bgcolor="lightgreen" scope="col">MS#3</td>
+										<td bgcolor="lightgreen" scope="col">MS#4</td>
+										<td bgcolor="lightgreen" scope="col">MS#5</td>
+										<td bgcolor="lightgreen" scope="col">MS#6</td>
+								   </tr>
+								  </table>
+								<div class="inner_table">
+								<div id="emailContents" class="table table-responsive">
+									<table class="table table-bordered" > 
+										<tr ng-repeat="emailContents in emailContents track by $index" ng-class-even="'info'" ng-class-odd="'success'">
+											<td style="background-color: lightgreen;" class="wrapword">PIT_STOP_PACK- End Time: 04:40</td>
+										  <td class="wrapword" test="{{ emailContents.emailContents}}">{{ hallfordsTillStatusAttributes.tillNumber}}</td>
+										 <td style="background-color: yellow;" class="wrapword">{{ hallfordsTillStatusAttributes.tillIpAddress}}</td>
+										  <td style="background-color: red;" class="wrapword">{{ hallfordsTillStatusAttributes.tillIpAddress}}</td>
+										  <td style="background-color: red;" class="wrapword">{{ hallfordsTillStatusAttributes.tillStatus}}</td>
+										  <td class="wrapword">{{ hallfordsTillStatusAttributes.storeAddressLink}}</td>
+											<!--   <td class="wrapword data-field">{{ emailContents.emailContents}}</td> -->
+											  <td ng-if="emailContents.emailContents[0] =='True'" style="background-color: green;" class="wrapword">04:40</td>
+                                            <td ng-if="emailContents.emailContents[0] =='False'" style="background-color: red;" class="wrapword">{{ emailContents.emailContents}}</td>
+										</tr>
+										
+										<!-- <tr ng-repeat="readHourlyOrderValue in listCustomers track by $index" ng-class-even="'info'" ng-class-odd="'success'">
+										  <td class="wrapword">{{ hallfordsTillStatusAttributes.storeName}}</td>
+										  <td class="wrapword">{{ hallfordsTillStatusAttributes.tillNumber}}</td>
+										  <td class="wrapword">{{ hallfordsTillStatusAttributes.tillIpAddress}}</td>
+										  <td class="wrapword">{{ hallfordsTillStatusAttributes.tillStatus}}</td>
+										  <td class="wrapword">{{ hallfordsTillStatusAttributes.storeAddressLink}} "word-break:break-all;"</td>
+										</tr> -->
+										
+									</table>
+								</div>
+						
+							</div>
+						</div>
+					</div> 
+					<!--End Main Table--------->
+					
+					
+				
+					
+				</div> <!--main container-->
+	
+	
+				<div class="col-md-2">
+						<table class="heading_table table-bordered" >
+						<tr>
+							<td bgcolor="lightgreen" scope="col">Delayed</td>
+							<td bgcolor="lightgreen" scope="col">Completed</td>
+							<td bgcolor="lightgreen" scope="col">WIP</td>
+							<td bgcolor="lightgreen" scope="col">Not Started</td>
+						</tr>
+						</table>
+					<div class="inner_table">
+					<div id="emailContents" class="table table-responsive">
+						<table class="table table-bordered" > 
+							<tr>
+								<td style="background-color: red;" class="wrapword"></td>
+								<td style="background-color: green;" class="wrapword"></td>
+								<td style="background-color: yellow;" class="wrapword"></td>
+								<td style="background-color: white;" class="wrapword"></td>
+						
+							</tr>
+							
+						
+							
+						</table>
+					</div>
+			
+				</div>
+			</div>
+	
+			</div>
+		</div>
+		
+		
+						
+		
+	</div>
+	
+		<!-- <script>
+		var fields = document.getElementsByClassName("data-field")
+        // console.log("Fields: "+fields.length)
+        for(var i=0; i<fields.length; i++){
+            var data = fields[i].textContent.toString()
+            console.log("data"+ data)
+            if(data.includes("True")){
+                fields[i].style.backgroundColor = "green"
+            }
+            else{
+                fields[i].style.backgroundColor = "red"
+            }
+        }
+					
+		</script>				
+ -->
+</body>
+</html>
