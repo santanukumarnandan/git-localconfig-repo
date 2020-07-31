@@ -1,0 +1,381 @@
+<html>
+<head>
+    <title>Halfords Till Status Dashboard</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <script src="/js/angularJsApp.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+<style>
+body {
+	background-image: url("images/background.png");
+	background-size: cover;
+    background-repeat:no-repeat;
+} 
+
+.header {
+	background-color: #000;
+	height: auto;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+#content_heading{
+	font-size: 30px;
+}
+.wrapword {
+	white-space: -moz-pre-wrap !important;
+	white-space: -webkit-pre-wrap;
+	white-space: -pre-wrap;
+	white-space: -o-pre-wrap;
+	white-space: pre-wrap;
+	word-wrap: break-word;
+	word-break: break-all;
+	white-space: normal;
+}
+
+.wrap {
+    width: 100%;
+}
+
+.wrap table {
+    width: 100%;
+    table-layout: fixed;
+	
+}
+.inner_table {
+    height: 425px;
+    overflow-y: auto;
+}
+::-webkit-scrollbar { width: 3 !important }
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey; 
+  border-radius: 10px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #000; 
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #b30000; 
+}
+
+
+.heading_table{
+	height: 50px;
+}
+.heading_table td{
+	text-align: center; 
+	font-weight: bold;
+}
+.inner_table table tr td, .heading_table tr td{
+	width: 100px;
+	cellpadding: 2px;
+	cellspacing: 2px;
+}
+
+.halfords{
+	width: 90px; 
+	height: 60px;
+	float: left;
+	padding: 5px;
+	margin: 2px;
+	min-height: 50px;
+	min-width: 50px;
+}
+.panel-body{
+	padding: 2px;
+}
+
+.col-md-10{
+	padding-right: 0;
+}
+
+.update_panel_body{
+	height:260px;
+	overflow-y: auto;
+}
+
+.list-group-item {
+	padding: 5px 2px;
+}
+#downtimeimage{
+	width: 50px; 
+	height: 50px;
+	border-radius:50%;
+	align:center;
+}
+
+</style>
+</head>
+ 
+<body>
+	
+	<div layout="row" layout-align="center center">
+		<div class="header container-fluid" style="padding:0;">
+			<div class="container-fluid">
+				<div class="logo">
+					<img src="images/logo.png">
+				</div>
+			</div>
+		</div>
+		<br>
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-md-10">
+					<div id="content_heading" align="center"; style="background-color:orange;">Halfords All Stores Till Status</div>
+					
+					<!------Main Table-------->
+					<div class="container-fluid" ng-app="app" ng-controller="jsaController" style="padding:0;">
+						
+							<div class="wrap">
+								  <table class="heading_table table-bordered" >
+									<tr>
+										<td bgcolor="orange" scope="col">Store Name</td>
+										<td bgcolor="orange" scope="col">Store Number</td>
+										<td bgcolor="orange" scope="col">Online Status</td>
+										<td bgcolor="orange" scope="col">Till Address</td>
+										<td bgcolor="orange" scope="col">Till Status</td>
+										<td bgcolor="orange" scope="col">Store Address</td>
+								   </tr>
+								  </table>
+								<div class="inner_table">
+								<div id="customerlist" class="table table-responsive">
+									<table class="table table-bordered" > 
+										<tr ng-repeat="hallfordsTillStatusAttributes in listCustomers track by $index" ng-class-even="'info'" ng-class-odd="'success'">
+										  <td class="wrapword">{{ hallfordsTillStatusAttributes.storeName}}</td>
+										  <td class="wrapword">{{ hallfordsTillStatusAttributes.tillNumber}}</td>
+										 <td><img id="downtimeimage" ng-src = "images/Till Down Symbol 1.png" /></td>
+										  <td class="wrapword">{{ hallfordsTillStatusAttributes.tillIpAddress}}</td>
+										  <td class="wrapword">{{ hallfordsTillStatusAttributes.tillStatus}}</td>
+										  <td class="wrapword">{{ hallfordsTillStatusAttributes.storeAddressLink}}</td>
+										</tr>
+										
+										
+										<!-- <tr ng-repeat="hallfordsTillStatusAttributes in listCustomers track by $index" ng-class-even="'info'" ng-class-odd="'success'">
+										  <td class="wrapword">{{ hallfordsTillStatusAttributes.storeName}}</td>
+										  <td class="wrapword">{{ hallfordsTillStatusAttributes.tillNumber}}</td>
+										  <td class="wrapword">{{ hallfordsTillStatusAttributes.tillIpAddress}}</td>
+										  <td class="wrapword">{{ hallfordsTillStatusAttributes.tillStatus}}</td>
+										  <td class="wrapword">{{ hallfordsTillStatusAttributes.storeAddressLink}} "word-break:break-all;"</td>
+										</tr>
+										<tr ng-repeat="hallfordsTillStatusAttributes in listCustomers track by $index" ng-class-even="'info'" ng-class-odd="'success'">
+										  <td class="wrapword">{{ hallfordsTillStatusAttributes.storeName}}</td>
+										  <td class="wrapword">{{ hallfordsTillStatusAttributes.tillNumber}}</td>
+										  <td class="wrapword">{{ hallfordsTillStatusAttributes.tillIpAddress}}</td>
+										  <td class="wrapword">{{ hallfordsTillStatusAttributes.tillStatus}}</td>
+										  <td class="wrapword">{{ hallfordsTillStatusAttributes.storeAddressLink}} "word-break:break-all;"</td>
+										</tr>
+										<tr ng-repeat="hallfordsTillStatusAttributes in listCustomers track by $index" ng-class-even="'info'" ng-class-odd="'success'">
+										  <td class="wrapword">{{ hallfordsTillStatusAttributes.storeName}}</td>
+										  <td class="wrapword">{{ hallfordsTillStatusAttributes.tillNumber}}</td>
+										  <td class="wrapword">{{ hallfordsTillStatusAttributes.tillIpAddress}}</td>
+										  <td class="wrapword">{{ hallfordsTillStatusAttributes.tillStatus}}</td>
+										  <td class="wrapword">{{ hallfordsTillStatusAttributes.storeAddressLink}} "word-break:break-all;"</td>
+										</tr>
+										<tr ng-repeat="hallfordsTillStatusAttributes in listCustomers track by $index" ng-class-even="'info'" ng-class-odd="'success'">
+										  <td class="wrapword">{{ hallfordsTillStatusAttributes.storeName}}</td>
+										  <td class="wrapword">{{ hallfordsTillStatusAttributes.tillNumber}}</td>
+										  <td class="wrapword">{{ hallfordsTillStatusAttributes.tillIpAddress}}</td>
+										  <td class="wrapword">{{ hallfordsTillStatusAttributes.tillStatus}}</td>
+										  <td class="wrapword">{{ hallfordsTillStatusAttributes.storeAddressLink}} "word-break:break-all;"</td>
+										</tr><tr ng-repeat="hallfordsTillStatusAttributes in listCustomers track by $index" ng-class-even="'info'" ng-class-odd="'success'">
+										  <td class="wrapword">{{ hallfordsTillStatusAttributes.storeName}}</td>
+										  <td class="wrapword">{{ hallfordsTillStatusAttributes.tillNumber}}</td>
+										  <td class="wrapword">{{ hallfordsTillStatusAttributes.tillIpAddress}}</td>
+										  <td class="wrapword">{{ hallfordsTillStatusAttributes.tillStatus}}</td>
+										  <td class="wrapword">{{ hallfordsTillStatusAttributes.storeAddressLink}} "word-break:break-all;"</td>
+										</tr>
+										<tr ng-repeat="hallfordsTillStatusAttributes in listCustomers track by $index" ng-class-even="'info'" ng-class-odd="'success'">
+										  <td class="wrapword">{{ hallfordsTillStatusAttributes.storeName}}</td>
+										  <td class="wrapword">{{ hallfordsTillStatusAttributes.tillNumber}}</td>
+										  <td class="wrapword">{{ hallfordsTillStatusAttributes.tillIpAddress}}</td>
+										  <td class="wrapword">{{ hallfordsTillStatusAttributes.tillStatus}}</td>
+										  <td class="wrapword">{{ hallfordsTillStatusAttributes.storeAddressLink}} "word-break:break-all;"</td>
+										</tr><tr ng-repeat="hallfordsTillStatusAttributes in listCustomers track by $index" ng-class-even="'info'" ng-class-odd="'success'">
+										  <td class="wrapword">{{ hallfordsTillStatusAttributes.storeName}}</td>
+										  <td class="wrapword">{{ hallfordsTillStatusAttributes.tillNumber}}</td>
+										  <td class="wrapword">{{ hallfordsTillStatusAttributes.tillIpAddress}}</td>
+										  <td class="wrapword">{{ hallfordsTillStatusAttributes.tillStatus}}</td>
+										  <td class="wrapword">{{ hallfordsTillStatusAttributes.storeAddressLink}} "word-break:break-all;"</td>
+										</tr>
+										<tr ng-repeat="hallfordsTillStatusAttributes in listCustomers track by $index" ng-class-even="'info'" ng-class-odd="'success'">
+										  <td class="wrapword">{{ hallfordsTillStatusAttributes.storeName}}</td>
+										  <td class="wrapword">{{ hallfordsTillStatusAttributes.tillNumber}}</td>
+										  <td class="wrapword">{{ hallfordsTillStatusAttributes.tillIpAddress}}</td>
+										  <td class="wrapword">{{ hallfordsTillStatusAttributes.tillStatus}}</td>
+										  <td class="wrapword">{{ hallfordsTillStatusAttributes.storeAddressLink}} "word-break:break-all;"</td>
+										</tr><tr ng-repeat="hallfordsTillStatusAttributes in listCustomers track by $index" ng-class-even="'info'" ng-class-odd="'success'">
+										  <td class="wrapword">{{ hallfordsTillStatusAttributes.storeName}}</td>
+										  <td class="wrapword">{{ hallfordsTillStatusAttributes.tillNumber}}</td>
+										  <td class="wrapword">{{ hallfordsTillStatusAttributes.tillIpAddress}}</td>
+										  <td class="wrapword">{{ hallfordsTillStatusAttributes.tillStatus}}</td>
+										  <td class="wrapword">{{ hallfordsTillStatusAttributes.storeAddressLink}} "word-break:break-all;"</td>
+										</tr>
+										<tr ng-repeat="hallfordsTillStatusAttributes in listCustomers track by $index" ng-class-even="'info'" ng-class-odd="'success'">
+										  <td class="wrapword">{{ hallfordsTillStatusAttributes.storeName}}</td>
+										  <td class="wrapword">{{ hallfordsTillStatusAttributes.tillNumber}}</td>
+										  <td class="wrapword">{{ hallfordsTillStatusAttributes.tillIpAddress}}</td>
+										  <td class="wrapword">{{ hallfordsTillStatusAttributes.tillStatus}}</td>
+										  <td class="wrapword">{{ hallfordsTillStatusAttributes.storeAddressLink}} "word-break:break-all;"</td>
+										</tr> -->
+									</table>
+								</div>
+						
+							</div>
+						</div>
+					</div>
+					<!--End Main Table--------->
+				</div> <!--main container-->
+				<div class="col-md-2">
+					<div>
+						<img src="images/halfords.png" class="halfords img-thumbnail img-responsive">
+						<img src="images/halfords1.png" class="halfords img-thumbnail img-responsive">
+						<img src="images/halfords2.png" class="halfords img-thumbnail img-responsive">
+						<img src="images/halfords3.png" class="halfords img-thumbnail img-responsive">
+						<img src="images/halfords4.png" class="halfords img-thumbnail img-responsive">
+						<img src="images/halfords5.png" class="halfords img-thumbnail img-responsive">
+						<div style="clear: both;"></div>
+					</div>
+					<br>
+					<div class="update_panel"">
+						<div class="panel panel-info">
+							<div class="panel-heading">Promotions & Updates</div>
+							<div class="panel-body update_panel_body">
+								<ul class="list-group">
+									<li bgcolor="orange" class="list-group-item">The BIG SPRING Clean</li>
+									<li bgcolor="orange" class="list-group-item">20% off on a range of cleaning</li>
+									<li bgcolor="orange" class="list-group-item">Only £99- KARCHER K2 FULL CONTROL PRESSURE WASHER</li>
+									<li bgcolor="orange" class="list-group-item">20% off on AUTOGLYM CAR Cleaning</li>
+									<li bgcolor="orange" class="list-group-item">Avail Halfords flexible finance from £99 powered by Klarna</li>
+									<li bgcolor="orange" class="list-group-item">Spread the cost- £9.46 per month over 48 months- CARRERA VENGEANCE MENS MOUNTAIN BIKE </li>
+								 </ul>
+							</div>
+						 </div>
+					</div>
+				</div> <!--Right container-->
+			</div>
+		</div>
+	</div>
+<!--
+<div layout="row" layout-align="center center">
+  <h3 span align="center"; style="background-color:orange;">Halfords All Stores Till Status:</h3>
+  <div class="container-fluid" ng-app="app" ng-controller="jsaController">
+    <div id="customerlist" class="row col-md-9 table-responsive">
+	<div class="wrap">
+      <table class="heading_table table-bordered" >
+        <tr>
+        <td bgcolor="orange" scope="col">Store Name</td>
+        <td bgcolor="orange" scope="col">Store Number</td>
+         <td bgcolor="orange" scope="col">Till Address</td>
+          <td bgcolor="orange" scope="col">Till Status</td>
+          <td bgcolor="orange" scope="col">Store Address</td>
+       </tr>
+      </table>
+	  <div class="inner_table" style="height:500px">
+		<table class="table table-bordered" > 
+        <tr ng-repeat="hallfordsTillStatusAttributes in listCustomers track by $index" ng-class-even="'info'" ng-class-odd="'success'">
+          <td class="wrapword">{{ hallfordsTillStatusAttributes.storeName}}</td>
+          <td class="wrapword">{{ hallfordsTillStatusAttributes.tillNumber}}</td>
+          <td class="wrapword">{{ hallfordsTillStatusAttributes.tillIpAddress}}</td>
+          <td class="wrapword">{{ hallfordsTillStatusAttributes.tillStatus}}</td>
+          <td class="wrapword">{{ hallfordsTillStatusAttributes.storeAddressLink}} "word-break:break-all;"</td>
+        </tr>
+		
+		
+		        <tr ng-repeat="hallfordsTillStatusAttributes in listCustomers track by $index" ng-class-even="'info'" ng-class-odd="'success'">
+          <td class="wrapword">{{ hallfordsTillStatusAttributes.storeName}}</td>
+          <td class="wrapword">{{ hallfordsTillStatusAttributes.tillNumber}}</td>
+          <td class="wrapword">{{ hallfordsTillStatusAttributes.tillIpAddress}}</td>
+          <td class="wrapword">{{ hallfordsTillStatusAttributes.tillStatus}}</td>
+          <td class="wrapword">{{ hallfordsTillStatusAttributes.storeAddressLink}} "word-break:break-all;"</td>
+        </tr>
+		<!--example
+		        <tr ng-repeat="hallfordsTillStatusAttributes in listCustomers track by $index" ng-class-even="'info'" ng-class-odd="'success'">
+          <td class="wrapword">{{ hallfordsTillStatusAttributes.storeName}}</td>
+          <td class="wrapword">{{ hallfordsTillStatusAttributes.tillNumber}}</td>
+          <td class="wrapword">{{ hallfordsTillStatusAttributes.tillIpAddress}}</td>
+          <td class="wrapword">{{ hallfordsTillStatusAttributes.tillStatus}}</td>
+          <td class="wrapword">{{ hallfordsTillStatusAttributes.storeAddressLink}} "word-break:break-all;"</td>
+        </tr>
+		        <tr ng-repeat="hallfordsTillStatusAttributes in listCustomers track by $index" ng-class-even="'info'" ng-class-odd="'success'">
+          <td class="wrapword">{{ hallfordsTillStatusAttributes.storeName}}</td>
+          <td class="wrapword">{{ hallfordsTillStatusAttributes.tillNumber}}</td>
+          <td class="wrapword">{{ hallfordsTillStatusAttributes.tillIpAddress}}</td>
+          <td class="wrapword">{{ hallfordsTillStatusAttributes.tillStatus}}</td>
+          <td class="wrapword">{{ hallfordsTillStatusAttributes.storeAddressLink}} "word-break:break-all;"</td>
+        </tr>
+		        <tr ng-repeat="hallfordsTillStatusAttributes in listCustomers track by $index" ng-class-even="'info'" ng-class-odd="'success'">
+          <td class="wrapword">{{ hallfordsTillStatusAttributes.storeName}}</td>
+          <td class="wrapword">{{ hallfordsTillStatusAttributes.tillNumber}}</td>
+          <td class="wrapword">{{ hallfordsTillStatusAttributes.tillIpAddress}}</td>
+          <td class="wrapword">{{ hallfordsTillStatusAttributes.tillStatus}}</td>
+          <td class="wrapword">{{ hallfordsTillStatusAttributes.storeAddressLink}} "word-break:break-all;"</td>
+        </tr>
+		        <tr ng-repeat="hallfordsTillStatusAttributes in listCustomers track by $index" ng-class-even="'info'" ng-class-odd="'success'">
+          <td class="wrapword">{{ hallfordsTillStatusAttributes.storeName}}</td>
+          <td class="wrapword">{{ hallfordsTillStatusAttributes.tillNumber}}</td>
+          <td class="wrapword">{{ hallfordsTillStatusAttributes.tillIpAddress}}</td>
+          <td class="wrapword">{{ hallfordsTillStatusAttributes.tillStatus}}</td>
+          <td class="wrapword">{{ hallfordsTillStatusAttributes.storeAddressLink}} "word-break:break-all;"</td>
+        </tr>
+		        <tr ng-repeat="hallfordsTillStatusAttributes in listCustomers track by $index" ng-class-even="'info'" ng-class-odd="'success'">
+          <td class="wrapword">{{ hallfordsTillStatusAttributes.storeName}}</td>
+          <td class="wrapword">{{ hallfordsTillStatusAttributes.tillNumber}}</td>
+          <td class="wrapword">{{ hallfordsTillStatusAttributes.tillIpAddress}}</td>
+          <td class="wrapword">{{ hallfordsTillStatusAttributes.tillStatus}}</td>
+          <td class="wrapword">{{ hallfordsTillStatusAttributes.storeAddressLink}} "word-break:break-all;"</td>
+        </tr>
+		        <tr ng-repeat="hallfordsTillStatusAttributes in listCustomers track by $index" ng-class-even="'info'" ng-class-odd="'success'">
+          <td class="wrapword">{{ hallfordsTillStatusAttributes.storeName}}</td>
+          <td class="wrapword">{{ hallfordsTillStatusAttributes.tillNumber}}</td>
+          <td class="wrapword">{{ hallfordsTillStatusAttributes.tillIpAddress}}</td>
+          <td class="wrapword">{{ hallfordsTillStatusAttributes.tillStatus}}</td>
+          <td class="wrapword">{{ hallfordsTillStatusAttributes.storeAddressLink}} "word-break:break-all;"</td>
+        </tr>
+		        <tr ng-repeat="hallfordsTillStatusAttributes in listCustomers track by $index" ng-class-even="'info'" ng-class-odd="'success'">
+          <td class="wrapword">{{ hallfordsTillStatusAttributes.storeName}}</td>
+          <td class="wrapword">{{ hallfordsTillStatusAttributes.tillNumber}}</td>
+          <td class="wrapword">{{ hallfordsTillStatusAttributes.tillIpAddress}}</td>
+          <td class="wrapword">{{ hallfordsTillStatusAttributes.tillStatus}}</td>
+          <td class="wrapword">{{ hallfordsTillStatusAttributes.storeAddressLink}} "word-break:break-all;"</td>
+        </tr>
+		        <tr ng-repeat="hallfordsTillStatusAttributes in listCustomers track by $index" ng-class-even="'info'" ng-class-odd="'success'">
+          <td class="wrapword">{{ hallfordsTillStatusAttributes.storeName}}</td>
+          <td class="wrapword">{{ hallfordsTillStatusAttributes.tillNumber}}</td>
+          <td class="wrapword">{{ hallfordsTillStatusAttributes.tillIpAddress}}</td>
+          <td class="wrapword">{{ hallfordsTillStatusAttributes.tillStatus}}</td>
+          <td class="wrapword">{{ hallfordsTillStatusAttributes.storeAddressLink}} "word-break:break-all;"</td>
+        </tr>
+		        <tr ng-repeat="hallfordsTillStatusAttributes in listCustomers track by $index" ng-class-even="'info'" ng-class-odd="'success'">
+          <td class="wrapword">{{ hallfordsTillStatusAttributes.storeName}}</td>
+          <td class="wrapword">{{ hallfordsTillStatusAttributes.tillNumber}}</td>
+          <td class="wrapword">{{ hallfordsTillStatusAttributes.tillIpAddress}}</td>
+          <td class="wrapword">{{ hallfordsTillStatusAttributes.tillStatus}}</td>
+          <td class="wrapword">{{ hallfordsTillStatusAttributes.storeAddressLink}} "word-break:break-all;"</td>
+        </tr>
+		        <tr ng-repeat="hallfordsTillStatusAttributes in listCustomers track by $index" ng-class-even="'info'" ng-class-odd="'success'">
+          <td class="wrapword">{{ hallfordsTillStatusAttributes.storeName}}</td>
+          <td class="wrapword">{{ hallfordsTillStatusAttributes.tillNumber}}</td>
+          <td class="wrapword">{{ hallfordsTillStatusAttributes.tillIpAddress}}</td>
+          <td class="wrapword">{{ hallfordsTillStatusAttributes.tillStatus}}</td>
+          <td class="wrapword">{{ hallfordsTillStatusAttributes.storeAddressLink}} "word-break:break-all;"</td>
+        </tr>
+		
+		</table>
+		</div>
+		</div>
+   </div>
+</div>
+</div>
+
+-->
+</body>
+</html>
