@@ -6,7 +6,10 @@
 
 package com.microsoft.azure.samples.spring;
 
+import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.repository.CrudRepository;
 
-public interface PetRepository {
+public interface StoreRepository extends JpaRepository<StoreMaster, Integer>{
+	
+//	 StoreMaster findStoreDetailsbyStoreNumber(Integer id); 
 }
