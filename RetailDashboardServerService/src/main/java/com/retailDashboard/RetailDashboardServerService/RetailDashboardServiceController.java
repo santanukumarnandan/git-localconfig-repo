@@ -12,10 +12,11 @@ import org.springframework.web.bind.annotation.RestController;
 
 
 
-
-
 @RestController
 public class RetailDashboardServiceController {
+	
+	@Autowired
+	private RetailDashboardServiceProxy retailDashboardServiceProxy;
 	
 	@Autowired
 	public HhtStatusDisplay hhtStatusDisplay;
@@ -30,4 +31,10 @@ public class RetailDashboardServiceController {
 	        return hHTAttributeBean;
 	}
 
+	
+	@GetMapping("/tillstatus-feign")
+	public List<TillStatusAttributes> retreiveTillStatus() {
+		List<TillStatusAttributes> tillStatus = retailDashboardServiceProxy.retrieveTillStatus();
+		return tillStatus;
+	}
 }
