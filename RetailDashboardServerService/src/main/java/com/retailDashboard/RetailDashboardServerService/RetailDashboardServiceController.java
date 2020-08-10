@@ -27,6 +27,13 @@ public class RetailDashboardServiceController {
 	@Autowired
 	public PrinterStatusDisplay printerStatusDisplay;
 	
+	@Autowired
+	private PedStatusDisplay pedStatusDisplay;
+	
+	@Autowired
+	private TabletStatusDisplay tabletStatusDisplay;
+	
+	
 	@GetMapping("/retail-dashboard/hhtstatus")
 	public List<HHTAttributeBean> findHhtStatus() throws UnknownHostException, IOException {
 		
@@ -63,5 +70,26 @@ public class RetailDashboardServiceController {
 	     //   System.out.println("Till Address" + displayTillStatus.getAll().toString());
 	        return printerBean;
 	}
+	
+	@GetMapping("/retail-dashboard/pedstatus")
+	public List<PedBean> findPedStatus() throws UnknownHostException, IOException {
+		
+		pedStatusDisplay = new PedStatusDisplay();
+	    //	System.out.println("Till Address" + displayTillStatus.getAll().get(0));
+	        List<PedBean> pedBean = pedStatusDisplay.getPedStatus();
+	     //   System.out.println("Till Address" + displayTillStatus.getAll().toString());
+	        return pedBean;
+	}
+	
+	@GetMapping("/retail-dashboard/tabletstatus")
+	public List<TabletBean> findTabletStatus() throws UnknownHostException, IOException {
+		
+		tabletStatusDisplay = new TabletStatusDisplay();
+	    //	System.out.println("Till Address" + displayTillStatus.getAll().get(0));
+	        List<TabletBean> tabletBean = tabletStatusDisplay.getTabletStatus();
+	     //   System.out.println("Till Address" + displayTillStatus.getAll().toString());
+	        return tabletBean;
+	}
+	
 	
 }
