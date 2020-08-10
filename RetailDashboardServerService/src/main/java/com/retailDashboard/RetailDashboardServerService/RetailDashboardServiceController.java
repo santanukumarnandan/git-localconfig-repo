@@ -21,6 +21,9 @@ public class RetailDashboardServiceController {
 	@Autowired
 	public HhtStatusDisplay hhtStatusDisplay;
 	
+	@Autowired
+	public FixedTillStatusDisplay fixedTillStatusDisplay;
+	
 	@GetMapping("/retail-dashboard/hhtstatus")
 	public List<HHTAttributeBean> findHhtStatus() throws UnknownHostException, IOException {
 		
@@ -37,4 +40,15 @@ public class RetailDashboardServiceController {
 		List<TillStatusAttributes> tillStatus = retailDashboardServiceProxy.retrieveTillStatus();
 		return tillStatus;
 	}
+	
+	@GetMapping("/retail-dashboard/fixedtillstatus")
+	public List<FixedTillBean> findFixedTillStatus() throws UnknownHostException, IOException {
+		
+		fixedTillStatusDisplay = new FixedTillStatusDisplay();
+	    //	System.out.println("Till Address" + displayTillStatus.getAll().get(0));
+	        List<FixedTillBean> fixedTillBean = fixedTillStatusDisplay.getFixedTillStatus();
+	     //   System.out.println("Till Address" + displayTillStatus.getAll().toString());
+	        return fixedTillBean;
+	}
+	
 }
