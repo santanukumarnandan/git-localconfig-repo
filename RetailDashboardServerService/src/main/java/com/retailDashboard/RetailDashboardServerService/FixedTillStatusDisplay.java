@@ -77,7 +77,7 @@ public class FixedTillStatusDisplay {
 					String ipAddress = (String)mapElement.getKey(); 
 					FixedTillBean fixedTillDetails = ((FixedTillBean)mapElement.getValue()); 
 			//		tillAttributes2.put(ipAddress,  new HallfordsTillStatusAttributes(storeDetails.getStoreName(), storeDetails.getStoreNumber(),storeDetails.getTillIpAddress(), "Host is  unreacheable", storeDetails.getStoreAddress()));
-					fixedTillAttributesparentMap.put(ipAddress, new FixedTillBean(fixedTillDetails.getFixedTillIpAddress(), fixedTillDetails.getFixedTillStoreNumber(), fixedTillDetails.getFixedTillPollingDate(), fixedTillDetails.getFixedTillstoreAddressLink(), fixedTillDetails.getFixedTillstoreName(), fixedTillDetails.getFixedTillPollingTime(), fixedTillDetails.getFixedTillPollingNumber(), fixedTillDetails.getFixedTillDateUp(), fixedTillDetails.getFixedTillTimeUp(), fixedTillDetails.getFixedTillDownSince()));
+					hhtAttributesThirdtMap.put(ipAddress, new FixedTillBean(fixedTillDetails.getFixedTillIpAddress(), fixedTillDetails.getFixedTillStoreNumber(), fixedTillDetails.getFixedTillPollingDate(), fixedTillDetails.getFixedTillstoreAddressLink(), fixedTillDetails.getFixedTillstoreName(), fixedTillDetails.getFixedTillPollingTime(), fixedTillDetails.getFixedTillPollingNumber(), fixedTillDetails.getFixedTillDateUp(), fixedTillDetails.getFixedTillTimeUp(), fixedTillDetails.getFixedTillDownSince()));
 
 				}
 			}
@@ -86,8 +86,8 @@ public class FixedTillStatusDisplay {
 			
 	  }
 
-			  Collection<FixedTillBean> hhtCollections = fixedTillAttributesparentMap.values();
-		        System.out.println("Size of HHT" + fixedTillAttributesparentMap.size());
+			  Collection<FixedTillBean> hhtCollections = hhtAttributesThirdtMap.values();
+		        System.out.println("Size of HHT" + hhtAttributesThirdtMap.size());
 		        List<FixedTillBean> list = new ArrayList<FixedTillBean>();
 		        list.addAll(hhtCollections);
 		        return list;

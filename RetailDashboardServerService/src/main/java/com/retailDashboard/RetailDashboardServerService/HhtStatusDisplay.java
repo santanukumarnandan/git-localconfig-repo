@@ -79,7 +79,7 @@ public class HhtStatusDisplay {
 					String ipAddress = (String)mapElement.getKey(); 
 					HHTAttributeBean hhtDetails = ((HHTAttributeBean)mapElement.getValue()); 
 			//		tillAttributes2.put(ipAddress,  new HallfordsTillStatusAttributes(storeDetails.getStoreName(), storeDetails.getStoreNumber(),storeDetails.getTillIpAddress(), "Host is  unreacheable", storeDetails.getStoreAddress()));
-					hhtAttributesparentMap.put(ipAddress, new HHTAttributeBean(hhtDetails.getHhtIpAddress(), hhtDetails.getHhtStoreNumber(), hhtDetails.getHhtPollingDate(), hhtDetails.getHhtstoreAddressLink(), hhtDetails.getHhtstoreName(), hhtDetails.getHhtPollingTime(), hhtDetails.getHhtPollingNumber(), hhtDetails.getHhtDateUp(), hhtDetails.getHhtTimeUp(), hhtDetails.getHhtDownSince()));
+					hhtAttributesThirdtMap.put(ipAddress, new HHTAttributeBean(hhtDetails.getHhtIpAddress(), hhtDetails.getHhtStoreNumber(), hhtDetails.getHhtPollingDate(), hhtDetails.getHhtstoreAddressLink(), hhtDetails.getHhtstoreName(), hhtDetails.getHhtPollingTime(), hhtDetails.getHhtPollingNumber(), hhtDetails.getHhtDateUp(), hhtDetails.getHhtTimeUp(), hhtDetails.getHhtDownSince()));
 				}
 			}
 				
@@ -87,8 +87,8 @@ public class HhtStatusDisplay {
 			
 	  }
 
-			  Collection<HHTAttributeBean> hhtCollections = hhtAttributesparentMap.values();
-		        System.out.println("Size of HHT" + hhtAttributesparentMap.size());
+			  Collection<HHTAttributeBean> hhtCollections = hhtAttributesThirdtMap.values();
+		        System.out.println("Size of HHT" + hhtAttributesThirdtMap.size());
 		        List<HHTAttributeBean> list = new ArrayList<HHTAttributeBean>();
 		        list.addAll(hhtCollections);
 		        return list;
