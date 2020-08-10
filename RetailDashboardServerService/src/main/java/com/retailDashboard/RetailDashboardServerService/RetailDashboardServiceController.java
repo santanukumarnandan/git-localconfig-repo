@@ -34,6 +34,10 @@ public class RetailDashboardServiceController {
 	private TabletStatusDisplay tabletStatusDisplay;
 	
 	
+	@Autowired
+	private PhoneStatusDisplay phoneStatusDisplay;
+	
+	
 	@GetMapping("/retail-dashboard/hhtstatus")
 	public List<HHTAttributeBean> findHhtStatus() throws UnknownHostException, IOException {
 		
@@ -91,5 +95,16 @@ public class RetailDashboardServiceController {
 	        return tabletBean;
 	}
 	
+	
+	
+	@GetMapping("/retail-dashboard/phonestatus")
+	public List<PhoneBean> findPhoneStatus() throws UnknownHostException, IOException {
+		
+		phoneStatusDisplay = new PhoneStatusDisplay();
+	    //	System.out.println("Till Address" + displayTillStatus.getAll().get(0));
+	        List<PhoneBean> phoneBean = phoneStatusDisplay.getPhoneStatus();
+	     //   System.out.println("Till Address" + displayTillStatus.getAll().toString());
+	        return phoneBean;
+	}
 	
 }
