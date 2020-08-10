@@ -37,6 +37,9 @@ public class RetailDashboardServiceController {
 	@Autowired
 	private PhoneStatusDisplay phoneStatusDisplay;
 	
+	@Autowired
+	private WifiAccessPointStatus wifiAccessPointStatus;
+	
 	
 	@GetMapping("/retail-dashboard/hhtstatus")
 	public List<HHTAttributeBean> findHhtStatus() throws UnknownHostException, IOException {
@@ -105,6 +108,16 @@ public class RetailDashboardServiceController {
 	        List<PhoneBean> phoneBean = phoneStatusDisplay.getPhoneStatus();
 	     //   System.out.println("Till Address" + displayTillStatus.getAll().toString());
 	        return phoneBean;
+	}
+	
+	@GetMapping("/retail-dashboard/wifitatus")
+	public List<WifiAccessPointBean> findWifiStatus() throws UnknownHostException, IOException {
+		
+		wifiAccessPointStatus = new WifiAccessPointStatus();
+	    //	System.out.println("Till Address" + displayTillStatus.getAll().get(0));
+	        List<WifiAccessPointBean> wifiBean = wifiAccessPointStatus.getWifiAccessStatus();
+	     //   System.out.println("Till Address" + displayTillStatus.getAll().toString());
+	        return wifiBean;
 	}
 	
 }
