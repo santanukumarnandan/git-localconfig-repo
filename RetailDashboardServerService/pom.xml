@@ -38,6 +38,11 @@
     <artifactId>spring-cloud-starter-openfeign</artifactId>
 	</dependency>
 		
+		
+		<dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-jpa</artifactId>
+        </dependency>
 
 	<dependency>
     <groupId>org.springframework.cloud</groupId>
@@ -61,6 +66,18 @@
 			<scope>runtime</scope>
 			<optional>true</optional>
 		</dependency>
+		
+		<dependency>
+   		 <groupId>com.microsoft.sqlserver</groupId>
+    	<artifactId>mssql-jdbc</artifactId>
+		</dependency>
+		
+		<dependency>
+    <groupId>org.javassist</groupId>
+    <artifactId>javassist</artifactId>
+    <version>3.23.1-GA</version>
+</dependency>
+		
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
@@ -95,4 +112,37 @@
 		</plugins>
 	</build>
 
+	    <profiles>
+        <profile>
+            <id>mysql</id>
+            <dependencies>
+                <dependency>
+                    <groupId>mysql</groupId>
+                    <artifactId>mysql-connector-java</artifactId>
+                    <scope>runtime</scope>
+                </dependency>
+            </dependencies>
+        </profile>
+        <profile>
+            <id>postgresql</id>
+            <dependencies>
+                <dependency>
+                    <groupId>org.postgresql</groupId>
+                    <artifactId>postgresql</artifactId>
+                    <scope>runtime</scope>
+                </dependency>
+            </dependencies>
+        </profile>
+        <profile>
+            <id>sql</id>
+            <dependencies>
+                <dependency>
+                    <groupId>com.microsoft.sqlserver</groupId>
+                    <artifactId>mssql-jdbc</artifactId>
+                </dependency>
+            </dependencies>
+        </profile>
+    </profiles>
+
+	
 </project>

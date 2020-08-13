@@ -8,7 +8,9 @@ package com.microsoft.azure.samples.spring;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.ComponentScan;
+import org.springframework.http.MediaType;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.HttpMediaTypeNotAcceptableException;
 import org.springframework.web.bind.annotation.*;
 
 import antlr.collections.List;
@@ -17,29 +19,33 @@ import java.math.BigDecimal;
 import java.util.Optional;
 
 
-@RestController
+
 //@ComponentScan("com.microsoft")
-@RequestMapping(path="/store-master")
+//@RequestMapping(path="/store-master")
+@RestController
 public class StoreController {
-    @Autowired
-    private StoreRepository storeRepository;
+   
+	@Autowired
+    private HalfordsRetailDashboardService halfordsRetailDashboardService;
 
     
     
-    @GetMapping("/store-master/{id}")
-	public Optional<StoreMaster> retreiveStoreMasterbyId(@PathVariable Integer id) {
-    
-    	Optional<StoreMaster>  storeMaster =  storeRepository.findById(id);
-    	return storeMaster;
-    }
+   
     
     
     @GetMapping("/store-master")
   	public List retreiveStoreMaster() {
       
-      	java.util.List<StoreMaster>  storeMaster =  storeRepository.findAll();
+      	java.util.List<HalfordsStoreMaster>  storeMaster =  halfordsRetailDashboardService.getStoreMasterDetails();
       	return (List) storeMaster;
       }
+    
+//    @GetMapping("/store-master")
+//  	public String retreiveStoreMaster() {
+//      return "Jpa Succede";
+//      }
+    
+    
     
 	/*
 	 * @PostMapping public @ResponseBody String createPet(@RequestBody StoreMaster

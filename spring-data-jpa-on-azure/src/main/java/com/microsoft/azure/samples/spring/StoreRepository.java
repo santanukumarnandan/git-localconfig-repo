@@ -9,7 +9,7 @@ package com.microsoft.azure.samples.spring;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.repository.CrudRepository;
 
-public interface StoreRepository extends JpaRepository<StoreMaster, Integer>{
+public interface StoreRepository extends JpaRepository<HalfordsStoreMaster, Long>{
 	
 //	 StoreMaster findStoreDetailsbyStoreNumber(Integer id); 
 }

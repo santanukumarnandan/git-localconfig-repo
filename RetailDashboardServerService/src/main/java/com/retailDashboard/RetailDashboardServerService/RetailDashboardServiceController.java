@@ -3,7 +3,9 @@ package com.retailDashboard.RetailDashboardServerService;
 import java.io.IOException;
 import java.math.BigDecimal;
 import java.net.UnknownHostException;
+import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -39,6 +41,9 @@ public class RetailDashboardServiceController {
 	
 	@Autowired
 	private WifiAccessPointStatus wifiAccessPointStatus;
+	
+	@Autowired
+	private HalStoreRepository halStoreRepository;
 	
 	
 	@GetMapping("/retail-dashboard/hhtstatus")
@@ -118,6 +123,23 @@ public class RetailDashboardServiceController {
 	        List<WifiAccessPointBean> wifiBean = wifiAccessPointStatus.getWifiAccessStatus();
 	     //   System.out.println("Till Address" + displayTillStatus.getAll().toString());
 	        return wifiBean;
+	}
+	
+	@GetMapping("/retail-dashboard/halstorestatus")
+	public List<HalStoreMaster> getStoreMasterDetails() {
+		List<HalStoreMaster> storeMaster= new ArrayList<HalStoreMaster>();
+		storeMaster =halStoreRepository.findAll();
+		System.out.println("Value" + storeMaster.size());
+		 return storeMaster;
+	}
+	
+	
+	@GetMapping("/retail-dashboard/halspecificstorestatus")
+	public Optional<HalStoreMaster> getSpecificStoreMasterDetails() {
+		int a=863;
+		halStoreRepository.findById(Long.parseLong(Integer.toString(a)));
+		System.out.println("Value of Master" + halStoreRepository.findById(Long.parseLong(Integer.toString(a))));
+		 return halStoreRepository.findById(Long.valueOf(863));
 	}
 	
 }
