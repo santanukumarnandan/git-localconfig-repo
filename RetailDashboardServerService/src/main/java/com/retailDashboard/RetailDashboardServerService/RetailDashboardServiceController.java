@@ -3,10 +3,15 @@ package com.retailDashboard.RetailDashboardServerService;
 import java.io.IOException;
 import java.math.BigDecimal;
 import java.net.UnknownHostException;
+import java.text.SimpleDateFormat;
+import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
+import java.util.Locale;
 import java.util.Optional;
 
+import org.hibernate.cfg.Environment;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -45,6 +50,9 @@ public class RetailDashboardServiceController {
 	@Autowired
 	private HalStoreRepository halStoreRepository;
 	
+	@Autowired
+	private HalFixedTillMasterRepository halFixedTillMasterRepository;
+	
 	
 	@GetMapping("/retail-dashboard/hhtstatus")
 	public List<HHTAttributeBean> findHhtStatus() throws UnknownHostException, IOException {
@@ -66,9 +74,28 @@ public class RetailDashboardServiceController {
 	@GetMapping("/retail-dashboard/fixedtillstatus")
 	public List<FixedTillBean> findFixedTillStatus() throws UnknownHostException, IOException {
 		
+		// Fetch details from hal_store_master table
+		List<HalStoreMaster> storeMasterList1= new ArrayList<HalStoreMaster>();
+		storeMasterList1 = getStoreMasterDetails();
+		
+		//Extract store number from List 1
+		List<Long> storeNumbers = new ArrayList<Long>();
+		for (HalStoreMaster halStoreMaster : storeMasterList1) {
+			storeNumbers.add(halStoreMaster.getStoreNumber());
+		}
+		
+		List<HalFixedTillMaster> fixedTillMasterList2 = new ArrayList<HalFixedTillMaster>();
+		fixedTillMasterList2 = halFixedTillMasterRepository.findAllById(storeNumbers);
+		
+		
+		//Find list of Fixed till status details which are down for that particular date
+		List<HalFixedTillMaster> fixedTillMasterList3 = new ArrayList<HalFixedTillMaster>();
+		fixedTillMasterList3 = halFixedTillMasterRepository.retrieveFixedTillDetailsforaParticularDate(new Date());
+		//Pass this list to main class and compare the list before preparing the final lista nd sending across
+		
 		fixedTillStatusDisplay = new FixedTillStatusDisplay();
 	    //	System.out.println("Till Address" + displayTillStatus.getAll().get(0));
-	        List<FixedTillBean> fixedTillBean = fixedTillStatusDisplay.getFixedTillStatus();
+	        List<FixedTillBean> fixedTillBean = fixedTillStatusDisplay.getFixedTillStatus(fixedTillMasterList2, storeNumbers);
 	     //   System.out.println("Till Address" + displayTillStatus.getAll().toString());
 	        return fixedTillBean;
 	}
@@ -125,6 +152,8 @@ public class RetailDashboardServiceController {
 	        return wifiBean;
 	}
 	
+	
+	//Fetch master details from HAL_RD_STORE_MASTER master table
 	@GetMapping("/retail-dashboard/halstorestatus")
 	public List<HalStoreMaster> getStoreMasterDetails() {
 		List<HalStoreMaster> storeMaster= new ArrayList<HalStoreMaster>();
@@ -141,5 +170,7 @@ public class RetailDashboardServiceController {
 		System.out.println("Value of Master" + halStoreRepository.findById(Long.parseLong(Integer.toString(a))));
 		 return halStoreRepository.findById(Long.valueOf(863));
 	}
+	
+	
 	
 }
