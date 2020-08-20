@@ -91,12 +91,17 @@ public class RetailDashboardServiceController {
 		//Find list of Fixed till status details which are down for that particular date
 		List<HalFixedTillMaster> fixedTillMasterList3 = new ArrayList<HalFixedTillMaster>();
 		fixedTillMasterList3 = halFixedTillMasterRepository.retrieveFixedTillDetailsforaParticularDate(new Date());
-		//Pass this list to main class and compare the list before preparing the final lista nd sending across
+		//Pass this list to main class and compare the list before preparing the final list and sending across
 		
 		fixedTillStatusDisplay = new FixedTillStatusDisplay();
 	    //	System.out.println("Till Address" + displayTillStatus.getAll().get(0));
+		
+		//Use the class fixedTillStatusDisplay as generic and create multiple methods for different parts and call them from other functions below 
 	        List<FixedTillBean> fixedTillBean = fixedTillStatusDisplay.getFixedTillStatus(fixedTillMasterList2, storeNumbers);
 	     //   System.out.println("Till Address" + displayTillStatus.getAll().toString());
+	      
+	        //Next update HAL_RD_FIXED_TILL_POLLING_DATA table with teh status of polling. Need to write this JPA
+	        
 	        return fixedTillBean;
 	}
 	
