@@ -53,6 +53,9 @@ public class RetailDashboardServiceController {
 	@Autowired
 	private HalFixedTillMasterRepository halFixedTillMasterRepository;
 	
+	@Autowired
+	private HalfordsTillPollDataRepository halfordsTillPollDataRepository;
+	
 	
 	@GetMapping("/retail-dashboard/hhtstatus")
 	public List<HHTAttributeBean> findHhtStatus() throws UnknownHostException, IOException {
@@ -90,7 +93,7 @@ public class RetailDashboardServiceController {
 		
 		//Find list of Fixed till status details which are down for that particular date
 		List<HalFixedTillMaster> fixedTillMasterList3 = new ArrayList<HalFixedTillMaster>();
-		fixedTillMasterList3 = halFixedTillMasterRepository.retrieveFixedTillDetailsforaParticularDate(new Date());
+	//	fixedTillMasterList3 = halFixedTillMasterRepository.retrieveFixedTillDetailsforaParticularDate(new Date());
 		//Pass this list to main class and compare the list before preparing the final list and sending across
 		
 		fixedTillStatusDisplay = new FixedTillStatusDisplay();
@@ -167,6 +170,7 @@ public class RetailDashboardServiceController {
 		 return storeMaster;
 	}
 	
+
 	
 	@GetMapping("/retail-dashboard/halspecificstorestatus")
 	public Optional<HalStoreMaster> getSpecificStoreMasterDetails() {
@@ -176,6 +180,11 @@ public class RetailDashboardServiceController {
 		 return halStoreRepository.findById(Long.valueOf(863));
 	}
 	
-	
+	@GetMapping("/retail-dashboard/tillPollData")
+	public List<HalFixedTillPollData> getFixedTillPollData() {
+		List<HalFixedTillPollData> fixedTillPollData = new ArrayList<HalFixedTillPollData>();
+		fixedTillPollData = halfordsTillPollDataRepository.findAll();
+		return fixedTillPollData;
+	}
 	
 }

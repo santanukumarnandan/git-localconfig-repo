@@ -7,6 +7,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface HalFixedTillMasterRepository extends JpaRepository<HalFixedTillMaster, Long>{
 
-	List<HalFixedTillMaster> retrieveFixedTillDetailsforaParticularDate(Date systemDate);
+//	List<HalFixedTillMaster> retrieveFixedTillDetailsforaParticularDate(Date systemDate);
 	
 }
