@@ -22,9 +22,9 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class RetailDashboardServiceController {
 	
-	@Autowired
-	private RetailDashboardServiceProxy retailDashboardServiceProxy;
-	
+//	@Autowired
+//	private RetailDashboardServiceProxy retailDashboardServiceProxy;
+//	
 	@Autowired
 	public HhtStatusDisplay hhtStatusDisplay;
 	
@@ -68,11 +68,11 @@ public class RetailDashboardServiceController {
 	}
 
 	
-	@GetMapping("/tillstatus-feign")
-	public List<TillStatusAttributes> retreiveTillStatus() {
-		List<TillStatusAttributes> tillStatus = retailDashboardServiceProxy.retrieveTillStatus();
-		return tillStatus;
-	}
+//	@GetMapping("/tillstatus-feign")
+//	public List<TillStatusAttributes> retreiveTillStatus() {
+//		List<TillStatusAttributes> tillStatus = retailDashboardServiceProxy.retrieveTillStatus();
+//		return tillStatus;
+//	}
 	
 	@GetMapping("/retail-dashboard/fixedtillstatus")
 	public List<FixedTillBean> findFixedTillStatus() throws UnknownHostException, IOException {
