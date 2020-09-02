@@ -13,7 +13,7 @@ public class RetailDashbaordExecuterClass {
 	private static RetailDashboardServiceProxy retailDashboardServiceProxy;
 
 	@Autowired
-	public static FixedTillStatusDisplay fixedTillStatusDisplay;
+	public static HalfordsFixedTillStatus fixedTillStatusDisplay;
 	
 	@Autowired
 	public static PrinterStatusDisplay printerStatusDisplay;

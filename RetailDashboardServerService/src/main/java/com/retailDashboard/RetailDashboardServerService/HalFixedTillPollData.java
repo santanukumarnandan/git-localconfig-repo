@@ -2,6 +2,8 @@ package com.retailDashboard.RetailDashboardServerService;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
@@ -12,6 +14,7 @@ public class HalFixedTillPollData {
 	
 	
 	@Id
+	 @GeneratedValue(strategy = GenerationType.AUTO)
 	 @Column(name="Record_Number")
 	 private String recordNumber;
 	
