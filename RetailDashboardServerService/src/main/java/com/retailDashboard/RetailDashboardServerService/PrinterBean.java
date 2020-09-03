@@ -9,7 +9,8 @@ public class PrinterBean {
 	private String printerstoreAddressLink;
 	private String printerstoreName;
 	private String printerPollingTime;
-	private String printerPollingNumber;
+	//This is record number in Printer MASTER TABLE WHICH IS GENERATED IN SEQUENCE
+	private Long printerPollingNumber;
 	private String printerlDateUp;
 	private String printerTimeUp;
 	private String printerDownSince;
@@ -26,7 +27,7 @@ public class PrinterBean {
 
 	public PrinterBean(String printerIpAddress, String printerStoreNumber, String printerPollingDate,
 			String printerstoreAddressLink, String printerstoreName, String printerPollingTime,
-			String printerPollingNumber, String printerlDateUp, String printerTimeUp, String printerDownSince) {
+			Long printerPollingNumber, String printerlDateUp, String printerTimeUp, String printerDownSince) {
 		super();
 		this.printerIpAddress = printerIpAddress;
 		this.printerStoreNumber = printerStoreNumber;
@@ -127,14 +128,14 @@ public class PrinterBean {
 
 
 
-	public String getPrinterPollingNumber() {
+	public Long getPrinterPollingNumber() {
 		return printerPollingNumber;
 	}
 
 
 
 
-	public void setPrinterPollingNumber(String printerPollingNumber) {
+	public void setPrinterPollingNumber(Long printerPollingNumber) {
 		this.printerPollingNumber = printerPollingNumber;
 	}
 

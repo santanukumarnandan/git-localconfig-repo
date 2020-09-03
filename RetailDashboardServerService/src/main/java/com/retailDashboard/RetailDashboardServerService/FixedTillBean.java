@@ -14,7 +14,7 @@ public class FixedTillBean {
 	private String fixedTillTimeUp;
 	private String fixedTillDownSince;
 	private String fixedTillDiscoveryTime;
-	private String fixedTillRecordNumber;
+	private Long fixedTillRecordNumber;
 	private String fixedTillIsActive;
 	private String fixedTillHostName;
 	
@@ -110,10 +110,10 @@ public class FixedTillBean {
 	public void setFixedTillDiscoveryTime(String fixedTillDiscoveryTime) {
 		this.fixedTillDiscoveryTime = fixedTillDiscoveryTime;
 	}
-	public String getFixedTillRecordNumber() {
+	public Long getFixedTillRecordNumber() {
 		return fixedTillRecordNumber;
 	}
-	public void setFixedTillRecordNumber(String fixedTillRecordNumber) {
+	public void setFixedTillRecordNumber(Long fixedTillRecordNumber) {
 		this.fixedTillRecordNumber = fixedTillRecordNumber;
 	}
 	public String getFixedTillIsActive() {
@@ -153,7 +153,7 @@ public class FixedTillBean {
 	
 	
 	public FixedTillBean(String fixedTillIpAddress, String fixedTillStoreNumber, String fixedTillDiscoveryDate,
-			String fixedTillDiscoveryTime, String fixedTillRecordNumber, String fixedTillIsActive,
+			String fixedTillDiscoveryTime, Long fixedTillRecordNumber, String fixedTillIsActive,
 			String fixedTillHostName) {
 		super();
 		this.fixedTillIpAddress = fixedTillIpAddress;

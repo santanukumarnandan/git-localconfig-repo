@@ -7,9 +7,10 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+
 @Entity
-@Table(name = "HAL_RD_FIXED_TILL_POLLING_DATA")
-public class HalFixedTillPollData {
+@Table(name = "HAL_RD_PHONE_POLLING_DATA")
+public class HalPhonePollData {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
@@ -40,11 +41,17 @@ public class HalFixedTillPollData {
 	@Column(name = "Down_Since")
 	private String downSince;
 
-	public HalFixedTillPollData() {
+	
+	
+	
+	public HalPhonePollData() {
 		super();
 	}
 
-	public HalFixedTillPollData(Long recordNumber, String stroreNumber, String storeIpAddress, String pollingDate,
+
+
+
+	public HalPhonePollData(Long recordNumber, String stroreNumber, String storeIpAddress, String pollingDate,
 			String pollingTime, String pollingNumber, String dateUp, String timeUp, String downSince) {
 		super();
 		this.recordNumber = recordNumber;
@@ -58,77 +65,134 @@ public class HalFixedTillPollData {
 		this.downSince = downSince;
 	}
 
+
+
+
 	public Long getRecordNumber() {
 		return recordNumber;
 	}
+
+
+
 
 	public void setRecordNumber(Long recordNumber) {
 		this.recordNumber = recordNumber;
 	}
 
+
+
+
 	public String getStroreNumber() {
 		return stroreNumber;
 	}
+
+
+
 
 	public void setStroreNumber(String stroreNumber) {
 		this.stroreNumber = stroreNumber;
 	}
 
+
+
+
 	public String getStoreIpAddress() {
 		return storeIpAddress;
 	}
+
+
+
 
 	public void setStoreIpAddress(String storeIpAddress) {
 		this.storeIpAddress = storeIpAddress;
 	}
 
+
+
+
 	public String getPollingDate() {
 		return pollingDate;
 	}
+
+
+
 
 	public void setPollingDate(String pollingDate) {
 		this.pollingDate = pollingDate;
 	}
 
+
+
+
 	public String getPollingTime() {
 		return pollingTime;
 	}
+
+
+
 
 	public void setPollingTime(String pollingTime) {
 		this.pollingTime = pollingTime;
 	}
 
+
+
+
 	public String getPollingNumber() {
 		return pollingNumber;
 	}
+
+
+
 
 	public void setPollingNumber(String pollingNumber) {
 		this.pollingNumber = pollingNumber;
 	}
 
+
+
+
 	public String getDateUp() {
 		return dateUp;
 	}
+
+
+
 
 	public void setDateUp(String dateUp) {
 		this.dateUp = dateUp;
 	}
 
+
+
+
 	public String getTimeUp() {
 		return timeUp;
 	}
+
+
+
 
 	public void setTimeUp(String timeUp) {
 		this.timeUp = timeUp;
 	}
 
+
+
+
 	public String getDownSince() {
 		return downSince;
 	}
 
+
+
+
 	public void setDownSince(String downSince) {
 		this.downSince = downSince;
 	}
+
+
+
 
 	@Override
 	public int hashCode() {
@@ -146,6 +210,9 @@ public class HalFixedTillPollData {
 		return result;
 	}
 
+
+
+
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)
@@ -154,7 +221,7 @@ public class HalFixedTillPollData {
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		HalFixedTillPollData other = (HalFixedTillPollData) obj;
+		HalPhonePollData other = (HalPhonePollData) obj;
 		if (dateUp == null) {
 			if (other.dateUp != null)
 				return false;
@@ -203,4 +270,7 @@ public class HalFixedTillPollData {
 		return true;
 	}
 
+	
+	
+	
 }

@@ -2,6 +2,8 @@ package com.retailDashboard.RetailDashboardServerService;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
@@ -23,8 +25,9 @@ public class HalPrinterMaster {
 	 @Column(name="Discovery_Time")
 	private String discoveryTime;
 	
+	 @GeneratedValue(strategy = GenerationType.AUTO)
 	 @Column(name="Record_Number")
-	private String recordNumber;
+	private Long recordNumber;
 	
 	 @Column(name="Is_Active")
 	private String isActive;
@@ -41,7 +44,7 @@ public class HalPrinterMaster {
 	}
 
 	public HalPrinterMaster(Long storeNumber, String storeIpAddress, String discoveryDate, String discoveryTime,
-			String recordNumber, String isActive, String storeHostName) {
+			Long recordNumber, String isActive, String storeHostName) {
 		super();
 		this.storeNumber = storeNumber;
 		this.storeIpAddress = storeIpAddress;
@@ -84,11 +87,11 @@ public class HalPrinterMaster {
 		this.discoveryTime = discoveryTime;
 	}
 
-	public String getRecordNumber() {
+	public Long getRecordNumber() {
 		return recordNumber;
 	}
 
-	public void setRecordNumber(String recordNumber) {
+	public void setRecordNumber(Long recordNumber) {
 		this.recordNumber = recordNumber;
 	}
 

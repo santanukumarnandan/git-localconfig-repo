@@ -8,44 +8,37 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="HAL_RD_FIXED_TILL_MASTER")
-public class HalFixedTillMaster {
-	
-	
-	@Id
-	 @Column(name="Store_Number")
-	 private Long storeNumber;
-	
-	 @Column(name="Store_IP_Address")
-	private String storeIpAddress;
-	
-	 @Column(name="Discovery_Date")
-	private String discoveryDate;
-	
-	 @Column(name="Discovery_Time")
-	private String discoveryTime;
-	
-	 @GeneratedValue(strategy = GenerationType.AUTO)
-	 @Column(name="Record_Number")
-	private Long recordNumber;
-	
-	 @Column(name="Is_Active")
-	private String isActive;
-	
-	 @Column(name="Store_Host_Name")
-	private String storeHostName;
-	 
-	 
-	 
+@Table(name = "HAL_RD_PED_MASTER")
+public class HalPedMaster {
 
-	public HalFixedTillMaster() {
+	@Id
+	@Column(name = "Store_Number")
+	private Long storeNumber;
+
+	@Column(name = "Store_IP_Address")
+	private String storeIpAddress;
+
+	@Column(name = "Discovery_Date")
+	private String discoveryDate;
+
+	@Column(name = "Discovery_Time")
+	private String discoveryTime;
+
+	 @GeneratedValue(strategy = GenerationType.AUTO)
+	@Column(name = "Record_Number")
+	private Long recordNumber;
+
+	@Column(name = "Is_Active")
+	private String isActive;
+
+	@Column(name = "Store_Host_Name")
+	private String storeHostName;
+
+	public HalPedMaster() {
 		super();
 	}
 
-
-
-
-	public HalFixedTillMaster(Long storeNumber, String storeIpAddress, String discoveryDate, String discoveryTime,
+	public HalPedMaster(Long storeNumber, String storeIpAddress, String discoveryDate, String discoveryTime,
 			Long recordNumber, String isActive, String storeHostName) {
 		super();
 		this.storeNumber = storeNumber;
@@ -57,106 +50,61 @@ public class HalFixedTillMaster {
 		this.storeHostName = storeHostName;
 	}
 
-
-
-
 	public Long getStoreNumber() {
 		return storeNumber;
 	}
-
-
-
 
 	public void setStoreNumber(Long storeNumber) {
 		this.storeNumber = storeNumber;
 	}
 
-
-
-
 	public String getStoreIpAddress() {
 		return storeIpAddress;
 	}
-
-
-
 
 	public void setStoreIpAddress(String storeIpAddress) {
 		this.storeIpAddress = storeIpAddress;
 	}
 
-
-
-
 	public String getDiscoveryDate() {
 		return discoveryDate;
 	}
-
-
-
 
 	public void setDiscoveryDate(String discoveryDate) {
 		this.discoveryDate = discoveryDate;
 	}
 
-
-
-
 	public String getDiscoveryTime() {
 		return discoveryTime;
 	}
-
-
-
 
 	public void setDiscoveryTime(String discoveryTime) {
 		this.discoveryTime = discoveryTime;
 	}
 
-
-
-
 	public Long getRecordNumber() {
 		return recordNumber;
 	}
-
-
-
 
 	public void setRecordNumber(Long recordNumber) {
 		this.recordNumber = recordNumber;
 	}
 
-
-
-
 	public String getIsActive() {
 		return isActive;
 	}
-
-
-
 
 	public void setIsActive(String isActive) {
 		this.isActive = isActive;
 	}
 
-
-
-
 	public String getStoreHostName() {
 		return storeHostName;
 	}
 
-
-
-
 	public void setStoreHostName(String storeHostName) {
 		this.storeHostName = storeHostName;
 	}
-
-
-
 
 	@Override
 	public int hashCode() {
@@ -172,9 +120,6 @@ public class HalFixedTillMaster {
 		return result;
 	}
 
-
-
-
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)
@@ -183,7 +128,7 @@ public class HalFixedTillMaster {
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		HalFixedTillMaster other = (HalFixedTillMaster) obj;
+		HalPedMaster other = (HalPedMaster) obj;
 		if (discoveryDate == null) {
 			if (other.discoveryDate != null)
 				return false;
@@ -221,8 +166,5 @@ public class HalFixedTillMaster {
 			return false;
 		return true;
 	}
-	
 
-	 
-	 
 }

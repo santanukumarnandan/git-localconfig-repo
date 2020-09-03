@@ -2,6 +2,8 @@ package com.retailDashboard.RetailDashboardServerService;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
@@ -61,8 +63,9 @@ public class HalStoreMaster {
 	 @Column(name="identifier") 
 	 private String identifier;
 	  
+	 @GeneratedValue(strategy = GenerationType.AUTO)
 	 @Column(name="record_number") 
-	 private String recordNumber;
+	 private Long recordNumber;
 	 
 	 
 	 
@@ -80,7 +83,7 @@ public class HalStoreMaster {
 	public HalStoreMaster(Long storeNumber, String areaNumber, String storeName, String atoreAssress,
 			String postCode, String country, String storeStatus, String premiumStore, String ipRangeTill,
 			String ipRangeTablet, String ipRangePed, String ipRangeWifi, String ipRangeHht, String ipRangePrinter,
-			String ipRangePhone, String identifier, String recordNumber) {
+			String ipRangePhone, String identifier, Long recordNumber) {
 		super();
 		this.storeNumber = storeNumber;
 		this.areaNumber = areaNumber;
@@ -229,11 +232,11 @@ public class HalStoreMaster {
 		this.identifier = identifier;
 	}
 
-	public String getRecordNumber() {
+	public Long getRecordNumber() {
 		return recordNumber;
 	}
 
-	public void setRecordNumber(String recordNumber) {
+	public void setRecordNumber(Long recordNumber) {
 		this.recordNumber = recordNumber;
 	}
 
