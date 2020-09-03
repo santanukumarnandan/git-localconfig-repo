@@ -57,6 +57,24 @@ public class RetailDashboardServiceController {
 	@Autowired
 	private HalfordsPrinterRepository halfordsPrinterRepository;
 
+	@Autowired
+	private HalPrinterPollDataRepository halPrinterPollDataRepository;
+
+	@Autowired
+	private HalPedPollDataRepository halPedPollDataRepository;
+
+	@Autowired
+	private HalTabletPollDataRepository halTabletPollDataRepository;
+
+	@Autowired
+	private HalPhonePollDataRepository halPhonePollDataRepository;
+
+	@Autowired
+	private HalHhtPollDataRepository halHhtPollDataRepository;
+
+	@Autowired
+	private HalWifiAccessPointPolDataRepository halWifiAccessPointPolDataRepository;
+
 	@GetMapping("/retail-dashboard/hhtstatus")
 	public List<HHTAttributeBean> findHhtStatus() throws UnknownHostException, IOException {
 
@@ -108,9 +126,10 @@ public class RetailDashboardServiceController {
 		// System.out.println("Till Address" + displayTillStatus.getAll().toString());
 
 		// Next update HAL_RD_FIXED_TILL_POLLING_DATA table with teh status of polling.
-		// Need to write this JPA. Loop all the data in FixedTillBean and insert it into HalFixedTillPollData
-		
-		List<HalFixedTillPollData> fixedTillPollDataTobeupdated= new ArrayList<HalFixedTillPollData>();
+		// Need to write this JPA. Loop all the data in FixedTillBean and insert it into
+		// HalFixedTillPollData
+
+		List<HalFixedTillPollData> fixedTillPollDataTobeupdated = new ArrayList<HalFixedTillPollData>();
 		HalFixedTillPollData halFixedTillPollData = new HalFixedTillPollData();
 		for (FixedTillBean fixedTillBean2 : fixedTillBean) {
 			halFixedTillPollData.setDateUp(fixedTillBean2.getFixedTillDateUp());
@@ -122,8 +141,7 @@ public class RetailDashboardServiceController {
 			halFixedTillPollData.setTimeUp(fixedTillBean2.getFixedTillTimeUp());
 			fixedTillPollDataTobeupdated.add(halFixedTillPollData);
 		}
-		
-		
+
 		halfordsTillPollDataRepository.saveAll(fixedTillPollDataTobeupdated);
 
 		return fixedTillBean;
@@ -221,6 +239,7 @@ public class RetailDashboardServiceController {
 		return halStoreRepository.findById(Long.valueOf(863));
 	}
 
+	// Fetch Fixed Till Poll Data
 	@GetMapping("/retail-dashboard/tillPollData")
 	public List<HalFixedTillPollData> getFixedTillPollData() {
 		List<HalFixedTillPollData> fixedTillPollData = new ArrayList<HalFixedTillPollData>();
@@ -233,6 +252,51 @@ public class RetailDashboardServiceController {
 		return ("Hello World");
 	}
 
-	
-	
+	// Fetch Printer Poll Data
+	@GetMapping("/retail-dashboard/printerPollData")
+	public List<HalPrinterPollData> getPrinterPollData() {
+		List<HalPrinterPollData> halPrinterPollData = new ArrayList<HalPrinterPollData>();
+		halPrinterPollData = halPrinterPollDataRepository.findAll();
+		return halPrinterPollData;
+	}
+
+	// Fetch Ped Poll Data
+	@GetMapping("/retail-dashboard/pedPollData")
+	public List<HalPedPollData> getPedPollData() {
+		List<HalPedPollData> halPedPollData = new ArrayList<HalPedPollData>();
+		halPedPollData = halPedPollDataRepository.findAll();
+		return halPedPollData;
+	}
+
+	// Fetch Tablet Poll Data
+	@GetMapping("/retail-dashboard/tabletPollData")
+	public List<HalTabletPollData> getTabletPollData() {
+		List<HalTabletPollData> halTabletPollData = new ArrayList<HalTabletPollData>();
+		halTabletPollData = halTabletPollDataRepository.findAll();
+		return halTabletPollData;
+	}
+
+	// Fetch Phone Poll Data
+	@GetMapping("/retail-dashboard/phonePollData")
+	public List<HalPhonePollData> getPhonePollData() {
+		List<HalPhonePollData> halPhonePollData = new ArrayList<HalPhonePollData>();
+		halPhonePollData = halPhonePollDataRepository.findAll();
+		return halPhonePollData;
+	}
+
+	// Fetch Hht Poll Data
+	@GetMapping("/retail-dashboard/hhtPollData")
+	public List<HalHhtPollData> getHhtPollData() {
+		List<HalHhtPollData> halHhtPollData = new ArrayList<HalHhtPollData>();
+		halHhtPollData = halHhtPollDataRepository.findAll();
+		return halHhtPollData;
+	}
+
+	// Fetch Wifi access point Poll Data
+	@GetMapping("/retail-dashboard/wifiPollData")
+	public List<HalWifiAccessPointPolData> getWifiPollData() {
+		List<HalWifiAccessPointPolData> halWifiAccessPointPolData = new ArrayList<HalWifiAccessPointPolData>();
+		halWifiAccessPointPolData = halWifiAccessPointPolDataRepository.findAll();
+		return halWifiAccessPointPolData;
+	}
 }
