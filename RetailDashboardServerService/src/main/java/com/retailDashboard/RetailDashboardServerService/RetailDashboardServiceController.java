@@ -74,6 +74,11 @@ public class RetailDashboardServiceController {
 
 	@Autowired
 	private HalWifiAccessPointPolDataRepository halWifiAccessPointPolDataRepository;
+	@Autowired
+	private HalfordsPedMasterRepository halfordsPedMasterRepository;
+	
+	@Autowired
+	private HalfordsTabletMasterRepository halfordsTabletMasterRepository;
 
 	@GetMapping("/retail-dashboard/hhtstatus")
 	public List<HHTAttributeBean> findHhtStatus() throws UnknownHostException, IOException {
@@ -185,9 +190,31 @@ public class RetailDashboardServiceController {
 	@GetMapping("/retail-dashboard/pedstatus")
 	public List<PedBean> findPedStatus() throws UnknownHostException, IOException {
 
+		// Fetch details from hal_store_master table
+				List<HalStoreMaster> storeMasterList1 = new ArrayList<HalStoreMaster>();
+				storeMasterList1 = getStoreMasterDetails();
+
+				// Extract store number from List 1
+				List<Long> storeNumbers = new ArrayList<Long>();
+				for (HalStoreMaster halStoreMaster : storeMasterList1) {
+					storeNumbers.add(halStoreMaster.getStoreNumber());
+				}
+
+				List<HalPedMaster> pedMasterList2 = new ArrayList<HalPedMaster>();
+				pedMasterList2 = halfordsPedMasterRepository.findAllById(storeNumbers);
+				
+				// Find list of ped status details which are down for that particular date
+				List<HalPedMaster> pedMasterList3 = new ArrayList<HalPedMaster>();
+				// fixedTillMasterList3 =
+				// halFixedTillMasterRepository.retrieveFixedTillDetailsforaParticularDate(new
+				// Date());
+				// Pass this list to main class and compare the list before preparing the final
+				// list and sending across
+
+				
 		pedStatusDisplay = new PedStatusDisplay();
 		// System.out.println("Till Address" + displayTillStatus.getAll().get(0));
-		List<PedBean> pedBean = pedStatusDisplay.getPedStatus();
+		List<PedBean> pedBean = pedStatusDisplay.getPedStatus(pedMasterList2,storeNumbers);
 		// System.out.println("Till Address" + displayTillStatus.getAll().toString());
 		return pedBean;
 	}
@@ -195,9 +222,30 @@ public class RetailDashboardServiceController {
 	@GetMapping("/retail-dashboard/tabletstatus")
 	public List<TabletBean> findTabletStatus() throws UnknownHostException, IOException {
 
+		
+		// Fetch details from hal_store_master table
+		List<HalStoreMaster> storeMasterList1 = new ArrayList<HalStoreMaster>();
+		storeMasterList1 = getStoreMasterDetails();
+
+		// Extract store number from List 1
+		List<Long> storeNumbers = new ArrayList<Long>();
+		for (HalStoreMaster halStoreMaster : storeMasterList1) {
+			storeNumbers.add(halStoreMaster.getStoreNumber());
+		}
+
+		List<HalTabletMaster> tabletMasterList2 = new ArrayList<HalTabletMaster>();
+		tabletMasterList2 = halfordsTabletMasterRepository.findAllById(storeNumbers);
+		// Find list of ped status details which are down for that particular date
+		List<HalTabletMaster> tabletMasterList3 = new ArrayList<HalTabletMaster>();
+		// fixedTillMasterList3 =
+		// halFixedTillMasterRepository.retrieveFixedTillDetailsforaParticularDate(new
+		// Date());
+		// Pass this list to main class and compare the list before preparing the final
+		// list and sending across
+		
 		tabletStatusDisplay = new TabletStatusDisplay();
 		// System.out.println("Till Address" + displayTillStatus.getAll().get(0));
-		List<TabletBean> tabletBean = tabletStatusDisplay.getTabletStatus();
+		List<TabletBean> tabletBean = tabletStatusDisplay.getTabletStatus(tabletMasterList2,storeNumbers);
 		// System.out.println("Till Address" + displayTillStatus.getAll().toString());
 		return tabletBean;
 	}

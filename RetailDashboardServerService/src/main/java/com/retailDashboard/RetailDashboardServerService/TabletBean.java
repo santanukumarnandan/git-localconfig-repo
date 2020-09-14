@@ -3,12 +3,13 @@ package com.retailDashboard.RetailDashboardServerService;
 public class TabletBean {
 
 	private String tabletTillIpAddress;
-	private String tabletTillStoreNumber;
+	private Long tabletTillStoreNumber;
 	private String tabletTillPollingDate;
 	private String tabletTillstoreAddressLink;
 	private String tabletTillstoreName;
 	private String tabletTillPollingTime;
-	private String tabletTillPollingNumber;
+	// This is sequence generated
+	private Long tabletTillPollingNumber;
 	private String tabletTillDateUp;
 	private String tabletTillTimeUp;
 	private String tabletTillDownSince;
@@ -25,9 +26,9 @@ public class TabletBean {
 
 
 
-	public TabletBean(String tabletTillIpAddress, String tabletTillStoreNumber, String tabletTillPollingDate,
+	public TabletBean(String tabletTillIpAddress, Long tabletTillStoreNumber, String tabletTillPollingDate,
 			String tabletTillstoreAddressLink, String tabletTillstoreName, String tabletTillPollingTime,
-			String tabletTillPollingNumber, String tabletTillDateUp, String tabletTillTimeUp,
+			Long tabletTillPollingNumber, String tabletTillDateUp, String tabletTillTimeUp,
 			String tabletTillDownSince) {
 		super();
 		this.tabletTillIpAddress = tabletTillIpAddress;
@@ -62,7 +63,7 @@ public class TabletBean {
 
 
 
-	public String getTabletTillStoreNumber() {
+	public Long getTabletTillStoreNumber() {
 		return tabletTillStoreNumber;
 	}
 
@@ -70,7 +71,7 @@ public class TabletBean {
 
 
 
-	public void setTabletTillStoreNumber(String tabletTillStoreNumber) {
+	public void setTabletTillStoreNumber(Long tabletTillStoreNumber) {
 		this.tabletTillStoreNumber = tabletTillStoreNumber;
 	}
 
@@ -142,7 +143,7 @@ public class TabletBean {
 
 
 
-	public String getTabletTillPollingNumber() {
+	public Long getTabletTillPollingNumber() {
 		return tabletTillPollingNumber;
 	}
 
@@ -150,7 +151,7 @@ public class TabletBean {
 
 
 
-	public void setTabletTillPollingNumber(String tabletTillPollingNumber) {
+	public void setTabletTillPollingNumber(Long tabletTillPollingNumber) {
 		this.tabletTillPollingNumber = tabletTillPollingNumber;
 	}
 

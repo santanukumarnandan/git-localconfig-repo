@@ -3,12 +3,13 @@ package com.retailDashboard.RetailDashboardServerService;
 public class PedBean {
 
 	private String pedTillIpAddress;
-	private String pedTillStoreNumber;
+	private Long pedTillStoreNumber;
 	private String pedTillPollingDate;
 	private String pedTillstoreAddressLink;
 	private String pedTillstoreName;
 	private String pedTillPollingTime;
-	private String pedTillPollingNumber;
+	//This is record number in Ped MASTER TABLE WHICH IS GENERATED IN SEQUENCE
+	private Long pedTillPollingNumber;
 	private String pedTillDateUp;
 	private String pedTillTimeUp;
 	private String pedTillDownSince;
@@ -23,9 +24,9 @@ public class PedBean {
 
 
 
-	public PedBean(String pedTillIpAddress, String pedTillStoreNumber, String pedTillPollingDate,
+	public PedBean(String pedTillIpAddress, Long pedTillStoreNumber, String pedTillPollingDate,
 			String pedTillstoreAddressLink, String pedTillstoreName, String pedTillPollingTime,
-			String pedTillPollingNumber, String pedTillDateUp, String pedTillTimeUp, String pedTillDownSince) {
+			Long pedTillPollingNumber, String pedTillDateUp, String pedTillTimeUp, String pedTillDownSince) {
 		super();
 		this.pedTillIpAddress = pedTillIpAddress;
 		this.pedTillStoreNumber = pedTillStoreNumber;
@@ -56,14 +57,14 @@ public class PedBean {
 
 
 
-	public String getPedTillStoreNumber() {
+	public Long getPedTillStoreNumber() {
 		return pedTillStoreNumber;
 	}
 
 
 
 
-	public void setPedTillStoreNumber(String pedTillStoreNumber) {
+	public void setPedTillStoreNumber(Long pedTillStoreNumber) {
 		this.pedTillStoreNumber = pedTillStoreNumber;
 	}
 
@@ -126,14 +127,14 @@ public class PedBean {
 
 
 
-	public String getPedTillPollingNumber() {
+	public Long getPedTillPollingNumber() {
 		return pedTillPollingNumber;
 	}
 
 
 
 
-	public void setPedTillPollingNumber(String pedTillPollingNumber) {
+	public void setPedTillPollingNumber(Long pedTillPollingNumber) {
 		this.pedTillPollingNumber = pedTillPollingNumber;
 	}
 
