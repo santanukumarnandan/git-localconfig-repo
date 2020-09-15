@@ -3,12 +3,13 @@ package com.retailDashboard.RetailDashboardServerService;
 public class PhoneBean {
 
 	private String phoneIpAddress;
-	private String phoneStoreNumber;
+	private Long phoneStoreNumber;
 	private String phonePollingDate;
 	private String phonestoreAddressLink;
 	private String phonestoreName;
 	private String phonePollingTime;
-	private String phonePollingNumber;
+	//Sequence generated
+	private Long phonePollingNumber;
 	private String phonelDateUp;
 	private String phoneTimeUp;
 	private String phoneDownSince;
@@ -23,8 +24,8 @@ public class PhoneBean {
 
 
 
-	public PhoneBean(String phoneIpAddress, String phoneStoreNumber, String phonePollingDate,
-			String phonestoreAddressLink, String phonestoreName, String phonePollingTime, String phonePollingNumber,
+	public PhoneBean(String phoneIpAddress, Long phoneStoreNumber, String phonePollingDate,
+			String phonestoreAddressLink, String phonestoreName, String phonePollingTime, Long phonePollingNumber,
 			String phonelDateUp, String phoneTimeUp, String phoneDownSince) {
 		super();
 		this.phoneIpAddress = phoneIpAddress;
@@ -56,14 +57,14 @@ public class PhoneBean {
 
 
 
-	public String getPhoneStoreNumber() {
+	public Long getPhoneStoreNumber() {
 		return phoneStoreNumber;
 	}
 
 
 
 
-	public void setPhoneStoreNumber(String phoneStoreNumber) {
+	public void setPhoneStoreNumber(Long phoneStoreNumber) {
 		this.phoneStoreNumber = phoneStoreNumber;
 	}
 
@@ -126,14 +127,14 @@ public class PhoneBean {
 
 
 
-	public String getPhonePollingNumber() {
+	public Long getPhonePollingNumber() {
 		return phonePollingNumber;
 	}
 
 
 
 
-	public void setPhonePollingNumber(String phonePollingNumber) {
+	public void setPhonePollingNumber(Long phonePollingNumber) {
 		this.phonePollingNumber = phonePollingNumber;
 	}
 

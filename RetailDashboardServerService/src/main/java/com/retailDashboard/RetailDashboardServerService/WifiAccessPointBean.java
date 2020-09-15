@@ -3,12 +3,13 @@ package com.retailDashboard.RetailDashboardServerService;
 public class WifiAccessPointBean {
 
 	private String wifiAccessPointIpAddress;
-	private String wifiAccessPointStoreNumber;
+	private Long wifiAccessPointStoreNumber;
 	private String wifiAccessPointPollingDate;
 	private String wifiAccessPointstoreAddressLink;
 	private String wifiAccessPointstoreName;
 	private String wifiAccessPointPollingTime;
-	private String wifiAccessPointPollingNumber;
+	//sequence generated
+	private Long wifiAccessPointPollingNumber;
 	private String wifiAccessPointlDateUp;
 	private String wifiAccessPointTimeUp;
 	private String wifiAccessPointDownSince;
@@ -21,9 +22,9 @@ public class WifiAccessPointBean {
 
 
 
-	public WifiAccessPointBean(String wifiAccessPointIpAddress, String wifiAccessPointStoreNumber,
+	public WifiAccessPointBean(String wifiAccessPointIpAddress, Long wifiAccessPointStoreNumber,
 			String wifiAccessPointPollingDate, String wifiAccessPointstoreAddressLink, String wifiAccessPointstoreName,
-			String wifiAccessPointPollingTime, String wifiAccessPointPollingNumber, String wifiAccessPointlDateUp,
+			String wifiAccessPointPollingTime, Long wifiAccessPointPollingNumber, String wifiAccessPointlDateUp,
 			String wifiAccessPointTimeUp, String wifiAccessPointDownSince) {
 		super();
 		this.wifiAccessPointIpAddress = wifiAccessPointIpAddress;
@@ -52,13 +53,13 @@ public class WifiAccessPointBean {
 
 
 
-	public String getWifiAccessPointStoreNumber() {
+	public Long getWifiAccessPointStoreNumber() {
 		return wifiAccessPointStoreNumber;
 	}
 
 
 
-	public void setWifiAccessPointStoreNumber(String wifiAccessPointStoreNumber) {
+	public void setWifiAccessPointStoreNumber(Long wifiAccessPointStoreNumber) {
 		this.wifiAccessPointStoreNumber = wifiAccessPointStoreNumber;
 	}
 
@@ -112,13 +113,13 @@ public class WifiAccessPointBean {
 
 
 
-	public String getWifiAccessPointPollingNumber() {
+	public Long getWifiAccessPointPollingNumber() {
 		return wifiAccessPointPollingNumber;
 	}
 
 
 
-	public void setWifiAccessPointPollingNumber(String wifiAccessPointPollingNumber) {
+	public void setWifiAccessPointPollingNumber(Long wifiAccessPointPollingNumber) {
 		this.wifiAccessPointPollingNumber = wifiAccessPointPollingNumber;
 	}
 

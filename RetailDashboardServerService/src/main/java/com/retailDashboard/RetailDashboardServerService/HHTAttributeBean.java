@@ -3,12 +3,13 @@ package com.retailDashboard.RetailDashboardServerService;
 public class HHTAttributeBean {
 	
 	private String hhtIpAddress;
-	private String hhtStoreNumber;
+	private Long hhtStoreNumber;
 	private String hhtPollingDate;
 	private String hhtstoreAddressLink;
 	private String hhtstoreName;
 	private String hhtPollingTime;
-	private String hhtPollingNumber;
+	//sequence generated
+	private Long hhtPollingNumber;
 	private String hhtDateUp;
 	private String hhtTimeUp;
 	private String hhtDownSince;
@@ -20,8 +21,8 @@ public class HHTAttributeBean {
 	
 	
 	
-	public HHTAttributeBean(String hhtIpAddress, String hhtStoreNumber, String hhtPollingDate,
-			String hhtstoreAddressLink, String hhtstoreName, String hhtPollingTime, String hhtPollingNumber,
+	public HHTAttributeBean(String hhtIpAddress, Long hhtStoreNumber, String hhtPollingDate,
+			String hhtstoreAddressLink, String hhtstoreName, String hhtPollingTime, Long hhtPollingNumber,
 			String hhtDateUp, String hhtTimeUp, String hhtDownSince) {
 		super();
 		this.hhtIpAddress = hhtIpAddress;
@@ -41,10 +42,10 @@ public class HHTAttributeBean {
 	public void setHhtIpAddress(String hhtIpAddress) {
 		this.hhtIpAddress = hhtIpAddress;
 	}
-	public String getHhtStoreNumber() {
+	public Long getHhtStoreNumber() {
 		return hhtStoreNumber;
 	}
-	public void setHhtStoreNumber(String hhtStoreNumber) {
+	public void setHhtStoreNumber(Long hhtStoreNumber) {
 		this.hhtStoreNumber = hhtStoreNumber;
 	}
 	public String getHhtPollingDate() {
@@ -71,10 +72,10 @@ public class HHTAttributeBean {
 	public void setHhtPollingTime(String hhtPollingTime) {
 		this.hhtPollingTime = hhtPollingTime;
 	}
-	public String getHhtPollingNumber() {
+	public Long getHhtPollingNumber() {
 		return hhtPollingNumber;
 	}
-	public void setHhtPollingNumber(String hhtPollingNumber) {
+	public void setHhtPollingNumber(Long hhtPollingNumber) {
 		this.hhtPollingNumber = hhtPollingNumber;
 	}
 	public String getHhtDateUp() {

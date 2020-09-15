@@ -34,11 +34,11 @@ public class RetailDashbaordExecuterClass {
 	private static WifiAccessPointStatus wifiAccessPointStatus;
 	
 	
-	public static void main(String[] args) throws UnknownHostException, IOException {
-		hhtStatusDisplay = new HhtStatusDisplay();
-	    hhtStatusDisplay.getHHTStatus();
-	    System.out.println("Status" + hhtStatusDisplay.getHHTStatus().size());
-	}
+//	public static void main(String[] args) throws UnknownHostException, IOException {
+//		hhtStatusDisplay = new HhtStatusDisplay();
+//	    hhtStatusDisplay.getHHTStatus();
+//	    System.out.println("Status" + hhtStatusDisplay.getHHTStatus().size());
+//	}
 	
 	
 }

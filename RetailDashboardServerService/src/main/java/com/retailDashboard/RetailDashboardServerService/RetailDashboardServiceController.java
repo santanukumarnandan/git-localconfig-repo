@@ -79,13 +79,42 @@ public class RetailDashboardServiceController {
 	
 	@Autowired
 	private HalfordsTabletMasterRepository halfordsTabletMasterRepository;
+	
+	@Autowired
+	private HalPhoneMasterRepository halPhoneMasterRepository;
+	
+	@Autowired
+	private HalfordsWifiAccessPointRepository halfordsWifiAccessPointRepository;
+	
+	@Autowired
+	private HalfordsHhtMasterRepository halfordsHhtMasterRepository;
 
 	@GetMapping("/retail-dashboard/hhtstatus")
 	public List<HHTAttributeBean> findHhtStatus() throws UnknownHostException, IOException {
 
+		// Fetch details from hal_store_master table
+				List<HalStoreMaster> storeMasterList1 = new ArrayList<HalStoreMaster>();
+				storeMasterList1 = getStoreMasterDetails();
+
+				// Extract store number from List 1
+				List<Long> storeNumbers = new ArrayList<Long>();
+				for (HalStoreMaster halStoreMaster : storeMasterList1) {
+					storeNumbers.add(halStoreMaster.getStoreNumber());
+				}
+				
+				List<HalHHTMaster> hhtMasterList2 = new ArrayList<HalHHTMaster>();
+				hhtMasterList2 = halfordsHhtMasterRepository.findAllById(storeNumbers);
+				// Find list of ped status details which are down for that particular date
+				List<HalPhoneMaster> tabletMasterList3 = new ArrayList<HalPhoneMaster>();
+				// fixedTillMasterList3 =
+				// halFixedTillMasterRepository.retrieveFixedTillDetailsforaParticularDate(new
+				// Date());
+				// Pass this list to main class and compare the list before preparing the final
+				// list and sending across
+		
 		hhtStatusDisplay = new HhtStatusDisplay();
 		// System.out.println("Till Address" + displayTillStatus.getAll().get(0));
-		List<HHTAttributeBean> hHTAttributeBean = hhtStatusDisplay.getHHTStatus();
+		List<HHTAttributeBean> hHTAttributeBean = hhtStatusDisplay.getHHTStatus(hhtMasterList2,storeNumbers);
 		// System.out.println("Till Address" + displayTillStatus.getAll().toString());
 		return hHTAttributeBean;
 	}
@@ -253,9 +282,30 @@ public class RetailDashboardServiceController {
 	@GetMapping("/retail-dashboard/phonestatus")
 	public List<PhoneBean> findPhoneStatus() throws UnknownHostException, IOException {
 
+		
+		// Fetch details from hal_store_master table
+				List<HalStoreMaster> storeMasterList1 = new ArrayList<HalStoreMaster>();
+				storeMasterList1 = getStoreMasterDetails();
+
+				// Extract store number from List 1
+				List<Long> storeNumbers = new ArrayList<Long>();
+				for (HalStoreMaster halStoreMaster : storeMasterList1) {
+					storeNumbers.add(halStoreMaster.getStoreNumber());
+				}
+				
+				List<HalPhoneMaster> phoneMasterList2 = new ArrayList<HalPhoneMaster>();
+				phoneMasterList2 = halPhoneMasterRepository.findAllById(storeNumbers);
+				// Find list of ped status details which are down for that particular date
+				List<HalPhoneMaster> tabletMasterList3 = new ArrayList<HalPhoneMaster>();
+				// fixedTillMasterList3 =
+				// halFixedTillMasterRepository.retrieveFixedTillDetailsforaParticularDate(new
+				// Date());
+				// Pass this list to main class and compare the list before preparing the final
+				// list and sending across
+
 		phoneStatusDisplay = new PhoneStatusDisplay();
 		// System.out.println("Till Address" + displayTillStatus.getAll().get(0));
-		List<PhoneBean> phoneBean = phoneStatusDisplay.getPhoneStatus();
+		List<PhoneBean> phoneBean = phoneStatusDisplay.getPhoneStatus(phoneMasterList2,storeNumbers);
 		// System.out.println("Till Address" + displayTillStatus.getAll().toString());
 		return phoneBean;
 	}
@@ -263,9 +313,29 @@ public class RetailDashboardServiceController {
 	@GetMapping("/retail-dashboard/wifitatus")
 	public List<WifiAccessPointBean> findWifiStatus() throws UnknownHostException, IOException {
 
+		// Fetch details from hal_store_master table
+		List<HalStoreMaster> storeMasterList1 = new ArrayList<HalStoreMaster>();
+		storeMasterList1 = getStoreMasterDetails();
+
+		// Extract store number from List 1
+		List<Long> storeNumbers = new ArrayList<Long>();
+		for (HalStoreMaster halStoreMaster : storeMasterList1) {
+			storeNumbers.add(halStoreMaster.getStoreNumber());
+		}
+		
+		List<HalWifiPointMaster> wifiMasterList2 = new ArrayList<HalWifiPointMaster>();
+		wifiMasterList2 = halfordsWifiAccessPointRepository.findAllById(storeNumbers);
+		// Find list of ped status details which are down for that particular date
+		List<HalPhoneMaster> tabletMasterList3 = new ArrayList<HalPhoneMaster>();
+		// fixedTillMasterList3 =
+		// halFixedTillMasterRepository.retrieveFixedTillDetailsforaParticularDate(new
+		// Date());
+		// Pass this list to main class and compare the list before preparing the final
+		// list and sending across
+		
 		wifiAccessPointStatus = new WifiAccessPointStatus();
 		// System.out.println("Till Address" + displayTillStatus.getAll().get(0));
-		List<WifiAccessPointBean> wifiBean = wifiAccessPointStatus.getWifiAccessStatus();
+		List<WifiAccessPointBean> wifiBean = wifiAccessPointStatus.getWifiAccessStatus(wifiMasterList2,storeNumbers);
 		// System.out.println("Till Address" + displayTillStatus.getAll().toString());
 		return wifiBean;
 	}
