@@ -134,13 +134,36 @@ public class RetailDashboardServiceController {
 
 		// Extract store number from List 1
 		List<Long> storeNumbers = new ArrayList<Long>();
+		List<String> ipRanges = new ArrayList<String>();
+		
+		// For first time there will be no data in hal fixed till master table. So we need to take the ip for till from hal store master table and extarct the till ip and add to repository 
+		List<HalFixedTillMaster> firstTimeList = new ArrayList<HalFixedTillMaster>();
+		HalFixedTillMaster halFixedTillMaster = new HalFixedTillMaster();
 		for (HalStoreMaster halStoreMaster : storeMasterList1) {
 			storeNumbers.add(halStoreMaster.getStoreNumber());
+			ipRanges.add(halStoreMaster.getIpRangeTill());
+			halFixedTillMaster.setStoreIpAddress(halStoreMaster.getIpRangeTill());
+			halFixedTillMaster.setStoreNumber(halStoreMaster.getStoreNumber());
+			firstTimeList.add(halFixedTillMaster);
 		}
 
+		 System.out.println("Till IP Ranges" + ipRanges.size());
+		 
 		List<HalFixedTillMaster> fixedTillMasterList2 = new ArrayList<HalFixedTillMaster>();
 		fixedTillMasterList2 = halFixedTillMasterRepository.findAllById(storeNumbers);
-
+		
+		
+//		if(fixedTillMasterList2.isEmpty()) {
+//				for (String storeIp : ipRanges) {
+//					halFixedTillMaster.setStoreIpAddress(storeIp);
+//					
+//					firstTimeList.add(halFixedTillMaster);
+//				}
+//				
+//				 System.out.println("First time till ip list" + firstTimeList.size());
+//		
+//		}
+		
 		// Find list of Fixed till status details which are down for that particular
 		// date
 		List<HalFixedTillMaster> fixedTillMasterList3 = new ArrayList<HalFixedTillMaster>();
@@ -154,9 +177,17 @@ public class RetailDashboardServiceController {
 		// System.out.println("Till Address" + displayTillStatus.getAll().get(0));
 
 		// Use the class fixedTillStatusDisplay as generic and create multiple methods
-		// for different parts and call them from other functions below
-		List<FixedTillBean> fixedTillBean = fixedTillStatusDisplay.getFixedTillStatus(fixedTillMasterList2,
-				storeNumbers);
+		// for different parts and call them from other functions below. for first time fixed till masterlist2 will be blank. SO check it 
+		List<FixedTillBean> fixedTillBean = new ArrayList<FixedTillBean>();
+		if(fixedTillMasterList2.isEmpty()) {
+			 fixedTillBean = fixedTillStatusDisplay.getFixedTillStatus(firstTimeList,
+					storeNumbers);
+		}
+		else {
+			fixedTillBean = fixedTillStatusDisplay.getFixedTillStatus(fixedTillMasterList2,
+					storeNumbers);
+		}
+		
 		// System.out.println("Till Address" + displayTillStatus.getAll().toString());
 
 		// Next update HAL_RD_FIXED_TILL_POLLING_DATA table with teh status of polling.

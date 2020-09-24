@@ -10591,7 +10591,7 @@ public class HalfordsTillStatusDisplay {
 			storeDetails.put("10.167.198.204", new HalfordsStoreDetails("10.167.198.204","398 Selby","Unit C2, Bawtry Road,Selby,YO8 8LY,,Phone:01757 706214", "0398"));
 			storeDetails.put("10.67.202.31", new HalfordsStoreDetails("10.67.202.31","399 Sunbury","Unit 6/9, Sunbury Cross Centre,Sunbury-on-Thames,TW16 7BB,Phone:01932 753440", "0399"));
 			storeDetails.put("10.67.202.32", new HalfordsStoreDetails("10.67.202.32","399 Sunbury","Unit 6/9, Sunbury Cross Centre,Sunbury-on-Thames,TW16 7BB,Phone:01932 753440", "0399"));
-			storeDetails.put("10.167.202.201", new HalfordsStoreDetails("10.167.202.201","399 Sunbury","Unit 6/9, Sunbury Cross Centre,Sunbury-on-Thames,TW16 7BB,Phone:01932 753440", "0399"));
+	//		storeDetails.put("10.167.202.201", new HalfordsStoreDetails("10.167.202.201","399 Sunbury","Unit 6/9, Sunbury Cross Centre,Sunbury-on-Thames,TW16 7BB,Phone:01932 753440", "0399"));
 			storeDetails.put("10.167.202.202", new HalfordsStoreDetails("10.167.202.202","399 Sunbury","Unit 6/9, Sunbury Cross Centre,Sunbury-on-Thames,TW16 7BB,Phone:01932 753440", "0399"));
 			storeDetails.put("10.67.187.32", new HalfordsStoreDetails("10.67.187.32","400 East Grinstead","175, London Road,East Grinstead,RH19 1YY,Phone:01342 328586", "0400"));
 			storeDetails.put("10.67.187.33", new HalfordsStoreDetails("10.67.187.33","400 East Grinstead","175, London Road,East Grinstead,RH19 1YY,Phone:01342 328586", "0400"));
@@ -10681,7 +10681,7 @@ public class HalfordsTillStatusDisplay {
 			storeDetails.put("10.166.183.201", new HalfordsStoreDetails("10.166.183.201","423 Burgess Hill","Unit A, 208-216 London Road,Burgess Hill,RH15 9RD,Phone:01444 250129", "0423"));
 			storeDetails.put("10.166.183.202", new HalfordsStoreDetails("10.166.183.202","423 Burgess Hill","Unit A, 208-216 London Road,Burgess Hill,RH15 9RD,Phone:01444 250129", "0423"));
 			storeDetails.put("10.166.183.203", new HalfordsStoreDetails("10.166.183.203","423 Burgess Hill","Unit A, 208-216 London Road,Burgess Hill,RH15 9RD,Phone:01444 250129", "0423"));
-			storeDetails.put("10.166.183.204", new HalfordsStoreDetails("10.166.183.204","423 Burgess Hill","Unit A, 208-216 London Road,Burgess Hill,RH15 9RD,Phone:01444 250129", "0423"));
+	//		storeDetails.put("10.166.183.204", new HalfordsStoreDetails("10.166.183.204","423 Burgess Hill","Unit A, 208-216 London Road,Burgess Hill,RH15 9RD,Phone:01444 250129", "0423"));
 			storeDetails.put("10.166.183.205", new HalfordsStoreDetails("10.166.183.205","423 Burgess Hill","Unit A, 208-216 London Road,Burgess Hill,RH15 9RD,Phone:01444 250129", "0423"));
 			storeDetails.put("10.68.87.31", new HalfordsStoreDetails("10.68.87.31","425 Coventry London Road","Orchard Retail Park,Coventry,CV3 4RP,Phone:02476 518 520", "0425"));
 			storeDetails.put("10.68.87.32", new HalfordsStoreDetails("10.68.87.32","425 Coventry London Road","Orchard Retail Park,Coventry,CV3 4RP,Phone:02476 518 520", "0425"));
@@ -10766,7 +10766,7 @@ public class HalfordsTillStatusDisplay {
 			storeDetails.put("10.166.142.205", new HalfordsStoreDetails("10.166.142.205","447 Blackpool","Unit J, Blackpool Retail Park,Blackpool,FY4 3AW,Phone 01253 403575", "0447"));
 			storeDetails.put("10.67.109.31", new HalfordsStoreDetails("10.67.109.31","448 Bilston","Springvale Retail Park.Bilston,WV14 0QL,Phone 01902 402385", "0448"));
 			storeDetails.put("10.67.109.32", new HalfordsStoreDetails("10.67.109.32","448 Bilston","Springvale Retail Park.Bilston,WV14 0QL,Phone 01902 402385", "0448"));
-			storeDetails.put("10.167.109.201", new HalfordsStoreDetails("10.167.109.201","448 Bilston","Springvale Retail Park.Bilston,WV14 0QL,Phone 01902 402385", "0448"));
+			storeDetails.put("10.167.109.204", new HalfordsStoreDetails("10.167.109.204","448 Bilston","Springvale Retail Park.Bilston,WV14 0QL,Phone 01902 402385", "0448"));
 			storeDetails.put("10.167.109.202", new HalfordsStoreDetails("10.167.109.202","448 Bilston","Springvale Retail Park.Bilston,WV14 0QL,Phone 01902 402385", "0448"));
 			storeDetails.put("10.167.109.203", new HalfordsStoreDetails("10.167.109.203","448 Bilston","Springvale Retail Park.Bilston,WV14 0QL,Phone 01902 402385", "0448"));
 			storeDetails.put("10.167.109.206", new HalfordsStoreDetails("10.167.109.206","448 Bilston","Springvale Retail Park.Bilston,WV14 0QL,Phone 01902 402385", "0448"));
@@ -10834,7 +10834,7 @@ public class HalfordsTillStatusDisplay {
 			storeDetails.put("10.67.191.32", new HalfordsStoreDetails("10.67.191.32","472 Leeds Kirkstall","Unit 1, Abbey Retail Park,Kirkstall,LS5 3RP,Phone:0113 278 0144", "0472"));
 			storeDetails.put("10.67.191.33", new HalfordsStoreDetails("10.67.191.33","472 Leeds Kirkstall","Unit 1, Abbey Retail Park,Kirkstall,LS5 3RP,Phone:0113 278 0144", "0472"));
 			storeDetails.put("10.167.191.201", new HalfordsStoreDetails("10.167.191.201","472 Leeds Kirkstall","Unit 1, Abbey Retail Park,Kirkstall,LS5 3RP,Phone:0113 278 0144", "0472"));
-			storeDetails.put("10.167.191.202", new HalfordsStoreDetails("10.167.191.202","472 Leeds Kirkstall","Unit 1, Abbey Retail Park,Kirkstall,LS5 3RP,Phone:0113 278 0144", "0472"));
+	//		storeDetails.put("10.167.191.202", new HalfordsStoreDetails("10.167.191.202","472 Leeds Kirkstall","Unit 1, Abbey Retail Park,Kirkstall,LS5 3RP,Phone:0113 278 0144", "0472"));
 			storeDetails.put("10.167.191.203", new HalfordsStoreDetails("10.167.191.203","472 Leeds Kirkstall","Unit 1, Abbey Retail Park,Kirkstall,LS5 3RP,Phone:0113 278 0144", "0472"));
 			storeDetails.put("10.167.191.204", new HalfordsStoreDetails("10.167.191.204","472 Leeds Kirkstall","Unit 1, Abbey Retail Park,Kirkstall,LS5 3RP,Phone:0113 278 0144", "0472"));
 			storeDetails.put("10.67.90.31", new HalfordsStoreDetails("10.67.90.31","475 Airdrie","Unit 9, Airdrie Retail Park,Airdrie,ML6 9JB,Phone:01236 760971", "0475"));
@@ -11047,7 +11047,7 @@ public class HalfordsTillStatusDisplay {
 			storeDetails.put("10.66.232.31", new HalfordsStoreDetails("10.66.232.31","547 Basildon","Unit C, Heron Retail Park,Basildon,SS14 3AF,Phone 01527 914 264", "0547"));
 			storeDetails.put("10.66.232.32", new HalfordsStoreDetails("10.66.232.32","547 Basildon","Unit C, Heron Retail Park,Basildon,SS14 3AF,Phone 01527 914 264", "0547"));
 			storeDetails.put("10.66.232.33", new HalfordsStoreDetails("10.66.232.33","547 Basildon","Unit C, Heron Retail Park,Basildon,SS14 3AF,Phone 01527 914 264", "0547"));
-			storeDetails.put("10.166.232.201", new HalfordsStoreDetails("10.166.232.201","547 Basildon","Unit C, Heron Retail Park,Basildon,SS14 3AF,Phone 01527 914 264", "0547"));
+		//	storeDetails.put("10.166.232.201", new HalfordsStoreDetails("10.166.232.201","547 Basildon","Unit C, Heron Retail Park,Basildon,SS14 3AF,Phone 01527 914 264", "0547"));
 			storeDetails.put("10.166.232.202", new HalfordsStoreDetails("10.166.232.202","547 Basildon","Unit C, Heron Retail Park,Basildon,SS14 3AF,Phone 01527 914 264", "0547"));
 			storeDetails.put("10.166.232.203", new HalfordsStoreDetails("10.166.232.203","547 Basildon","Unit C, Heron Retail Park,Basildon,SS14 3AF,Phone 01527 914 264", "0547"));
 			storeDetails.put("10.166.232.204", new HalfordsStoreDetails("10.166.232.204","547 Basildon","Unit C, Heron Retail Park,Basildon,SS14 3AF,Phone 01527 914 264", "0547"));
@@ -11064,6 +11064,7 @@ public class HalfordsTillStatusDisplay {
 			storeDetails.put("10.66.209.31", new HalfordsStoreDetails("10.66.209.31","549 Bangor","Caernarfon Road,Bangor,LL57 4SU,Phone 01248 362629", "0549"));
 			storeDetails.put("10.66.209.32", new HalfordsStoreDetails("10.66.209.32","549 Bangor","Caernarfon Road,Bangor,LL57 4SU,Phone 01248 362629", "0549"));
 			storeDetails.put("10.66.209.34", new HalfordsStoreDetails("10.66.209.34","549 Bangor","Caernarfon Road,Bangor,LL57 4SU,Phone 01248 362629", "0549"));
+			storeDetails.put("10.66.209.33", new HalfordsStoreDetails("10.66.209.33","549 Bangor","Caernarfon Road,Bangor,LL57 4SU,Phone 01248 362629", "0549"));
 			storeDetails.put("10.166.209.201", new HalfordsStoreDetails("10.166.209.201","549 Bangor","Caernarfon Road,Bangor,LL57 4SU,Phone 01248 362629", "0549"));
 			storeDetails.put("10.166.209.202", new HalfordsStoreDetails("10.166.209.202","549 Bangor","Caernarfon Road,Bangor,LL57 4SU,Phone 01248 362629", "0549"));
 			storeDetails.put("10.166.209.203", new HalfordsStoreDetails("10.166.209.203","549 Bangor","Caernarfon Road,Bangor,LL57 4SU,Phone 01248 362629", "0549"));
@@ -11328,10 +11329,13 @@ public class HalfordsTillStatusDisplay {
 			storeDetails.put("10.167.99.203", new HalfordsStoreDetails("10.167.99.203","973 Romford","Unit 2, Gallows Corner Retail Park,Romford,RM3 0AD,Phone 0170 8347528", "0973"));
 			storeDetails.put("10.167.99.204", new HalfordsStoreDetails("10.167.99.204","973 Romford","Unit 2, Gallows Corner Retail Park,Romford,RM3 0AD,Phone 0170 8347528", "0973"));
 			storeDetails.put("10.66.199.31", new HalfordsStoreDetails("10.66.199.31","974 Charlton","Unit 4, Stonelake Retail Park,London,SE7 8LU,Phone 0208 293 48440208", "0974"));
+			storeDetails.put("10.166.199.201", new HalfordsStoreDetails("10.166.199.201","974 Charlton","Unit 4, Stonelake Retail Park,London,SE7 8LU,Phone 0208 293 48440208", "0974"));
+
+			
 			storeDetails.put("10.66.199.32", new HalfordsStoreDetails("10.66.199.32","974 Charlton","Unit 4, Stonelake Retail Park,London,SE7 8LU,Phone 0208 293 48440208", "0974"));
 			storeDetails.put("10.66.199.33", new HalfordsStoreDetails("10.66.199.33","974 Charlton","Unit 4, Stonelake Retail Park,London,SE7 8LU,Phone 0208 293 48440208", "0974"));
 			storeDetails.put("10.66.199.34", new HalfordsStoreDetails("10.66.199.34","974 Charlton","Unit 4, Stonelake Retail Park,London,SE7 8LU,Phone 0208 293 48440208", "0974"));
-			storeDetails.put("10.166.199.202", new HalfordsStoreDetails("10.166.199.202","974 Charlton","Unit 4, Stonelake Retail Park,London,SE7 8LU,Phone 0208 293 48440208", "0974"));
+	//		storeDetails.put("10.166.199.202", new HalfordsStoreDetails("10.166.199.202","974 Charlton","Unit 4, Stonelake Retail Park,London,SE7 8LU,Phone 0208 293 48440208", "0974"));
 			storeDetails.put("10.166.199.203", new HalfordsStoreDetails("10.166.199.203","974 Charlton","Unit 4, Stonelake Retail Park,London,SE7 8LU,Phone 0208 293 48440208", "0974"));
 			storeDetails.put("10.166.199.204", new HalfordsStoreDetails("10.166.199.204","974 Charlton","Unit 4, Stonelake Retail Park,London,SE7 8LU,Phone 0208 293 48440208", "0974"));
 			storeDetails.put("10.166.199.205", new HalfordsStoreDetails("10.166.199.205","974 Charlton","Unit 4, Stonelake Retail Park,London,SE7 8LU,Phone 0208 293 48440208", "0974"));
@@ -11445,7 +11449,7 @@ public class HalfordsTillStatusDisplay {
 			storeDetails.put("10.67.83.32", new HalfordsStoreDetails("10.67.83.32","993 Twickenham Ivybridge","Unit 4, Ivybridge Centre,Twickenham,TW7 7DY,Phone 0208 8914403", "0993"));
 			storeDetails.put("10.67.83.33", new HalfordsStoreDetails("10.67.83.33","993 Twickenham Ivybridge","Unit 4, Ivybridge Centre,Twickenham,TW7 7DY,Phone 0208 8914403", "0993"));
 			storeDetails.put("10.167.83.201", new HalfordsStoreDetails("10.167.83.201","993 Twickenham Ivybridge","Unit 4, Ivybridge Centre,Twickenham,TW7 7DY,Phone 0208 8914403", "0993"));
-			storeDetails.put("10.167.83.202", new HalfordsStoreDetails("10.167.83.202","993 Twickenham Ivybridge","Unit 4, Ivybridge Centre,Twickenham,TW7 7DY,Phone 0208 8914403", "0993"));
+		//	storeDetails.put("10.167.83.202", new HalfordsStoreDetails("10.167.83.202","993 Twickenham Ivybridge","Unit 4, Ivybridge Centre,Twickenham,TW7 7DY,Phone 0208 8914403", "0993"));
 			storeDetails.put("10.167.83.203", new HalfordsStoreDetails("10.167.83.203","993 Twickenham Ivybridge","Unit 4, Ivybridge Centre,Twickenham,TW7 7DY,Phone 0208 8914403", "0993"));
 			storeDetails.put("10.167.83.204", new HalfordsStoreDetails("10.167.83.204","993 Twickenham Ivybridge","Unit 4, Ivybridge Centre,Twickenham,TW7 7DY,Phone 0208 8914403", "0993"));
 			storeDetails.put("10.167.83.206", new HalfordsStoreDetails("10.167.83.206","993 Twickenham Ivybridge","Unit 4, Ivybridge Centre,Twickenham,TW7 7DY,Phone 0208 8914403", "0993"));
@@ -11463,7 +11467,7 @@ public class HalfordsTillStatusDisplay {
 			storeDetails.put("10.67.194.33", new HalfordsStoreDetails("10.67.194.33","996 Ruislip","Unit 4, Victoria Retail Park,South Ruislip,HA4 0QE,Phone 0208 864 9465", "0996"));
 			storeDetails.put("10.67.194.34", new HalfordsStoreDetails("10.67.194.34","996 Ruislip","Unit 4, Victoria Retail Park,South Ruislip,HA4 0QE,Phone 0208 864 9465", "0996"));
 			storeDetails.put("10.167.194.201", new HalfordsStoreDetails("10.167.194.201","996 Ruislip","Unit 4, Victoria Retail Park,South Ruislip,HA4 0QE,Phone 0208 864 9465", "0996"));
-			storeDetails.put("10.167.194.202", new HalfordsStoreDetails("10.167.194.202","996 Ruislip","Unit 4, Victoria Retail Park,South Ruislip,HA4 0QE,Phone 0208 864 9465", "0996"));
+		//	storeDetails.put("10.167.194.202", new HalfordsStoreDetails("10.167.194.202","996 Ruislip","Unit 4, Victoria Retail Park,South Ruislip,HA4 0QE,Phone 0208 864 9465", "0996"));
 			storeDetails.put("10.167.194.203", new HalfordsStoreDetails("10.167.194.203","996 Ruislip","Unit 4, Victoria Retail Park,South Ruislip,HA4 0QE,Phone 0208 864 9465", "0996"));
 			storeDetails.put("10.167.194.204", new HalfordsStoreDetails("10.167.194.204","996 Ruislip","Unit 4, Victoria Retail Park,South Ruislip,HA4 0QE,Phone 0208 864 9465", "0996"));
 			storeDetails.put("10.167.194.205", new HalfordsStoreDetails("10.167.194.205","996 Ruislip","Unit 4, Victoria Retail Park,South Ruislip,HA4 0QE,Phone 0208 864 9465", "0996"));
@@ -11635,7 +11639,7 @@ public class HalfordsTillStatusDisplay {
 			storeDetails.put("10.66.190.34", new HalfordsStoreDetails("10.66.190.34","732 Enfield","Unit 3, Great Cambridge Road,Enfield,EN1 3RW,Phone 01527 914 269", "0732"));
 			storeDetails.put("10.166.190.201", new HalfordsStoreDetails("10.166.190.201","732 Enfield","Unit 3, Great Cambridge Road,Enfield,EN1 3RW,Phone 01527 914 269", "0732"));
 			storeDetails.put("10.166.190.202", new HalfordsStoreDetails("10.166.190.202","732 Enfield","Unit 3, Great Cambridge Road,Enfield,EN1 3RW,Phone 01527 914 269", "0732"));
-			storeDetails.put("10.166.190.203", new HalfordsStoreDetails("10.166.190.203","732 Enfield","Unit 3, Great Cambridge Road,Enfield,EN1 3RW,Phone 01527 914 269", "0732"));
+	//		storeDetails.put("10.166.190.203", new HalfordsStoreDetails("10.166.190.203","732 Enfield","Unit 3, Great Cambridge Road,Enfield,EN1 3RW,Phone 01527 914 269", "0732"));
 			storeDetails.put("10.166.190.204", new HalfordsStoreDetails("10.166.190.204","732 Enfield","Unit 3, Great Cambridge Road,Enfield,EN1 3RW,Phone 01527 914 269", "0732"));
 			storeDetails.put("10.166.190.205", new HalfordsStoreDetails("10.166.190.205","732 Enfield","Unit 3, Great Cambridge Road,Enfield,EN1 3RW,Phone 01527 914 269", "0732"));
 			storeDetails.put("10.166.190.206", new HalfordsStoreDetails("10.166.190.206","732 Enfield","Unit 3, Great Cambridge Road,Enfield,EN1 3RW,Phone 01527 914 269", "0732"));
@@ -11645,7 +11649,7 @@ public class HalfordsTillStatusDisplay {
 			storeDetails.put("10.68.177.34", new HalfordsStoreDetails("10.68.177.34","733 Farnborough","Unit B, Farnborough Gate,Farnborough,GU14 8BL,Phone 01527 914 279", "0733"));
 			storeDetails.put("10.168.177.201", new HalfordsStoreDetails("10.168.177.201","733 Farnborough","Unit B, Farnborough Gate,Farnborough,GU14 8BL,Phone 01527 914 279", "0733"));
 			storeDetails.put("10.168.177.202", new HalfordsStoreDetails("10.168.177.202","733 Farnborough","Unit B, Farnborough Gate,Farnborough,GU14 8BL,Phone 01527 914 279", "0733"));
-			storeDetails.put("10.168.177.203", new HalfordsStoreDetails("10.168.177.203","733 Farnborough","Unit B, Farnborough Gate,Farnborough,GU14 8BL,Phone 01527 914 279", "0733"));
+		//	storeDetails.put("10.168.177.203", new HalfordsStoreDetails("10.168.177.203","733 Farnborough","Unit B, Farnborough Gate,Farnborough,GU14 8BL,Phone 01527 914 279", "0733"));
 			storeDetails.put("10.168.177.204", new HalfordsStoreDetails("10.168.177.204","733 Farnborough","Unit B, Farnborough Gate,Farnborough,GU14 8BL,Phone 01527 914 279", "0733"));
 			storeDetails.put("10.66.78.31", new HalfordsStoreDetails("10.66.78.31","734 Burton On Trent","Unit C, St. Peters Retail Park,Burton upon Trent,DE14 3RH,Phone 01283 495160", "0734"));
 			storeDetails.put("10.66.78.32", new HalfordsStoreDetails("10.66.78.32","734 Burton On Trent","Unit C, St. Peters Retail Park,Burton upon Trent,DE14 3RH,Phone 01283 495160", "0734"));
@@ -11937,7 +11941,7 @@ public class HalfordsTillStatusDisplay {
 			storeDetails.put("10.66.205.32", new HalfordsStoreDetails("10.66.205.32","791 Burnley","Anchor Retail Park,Burnley,BB11 1BS,Phone 01282 855290", "0791"));
 			storeDetails.put("10.66.205.33", new HalfordsStoreDetails("10.66.205.33","791 Burnley","Anchor Retail Park,Burnley,BB11 1BS,Phone 01282 855290", "0791"));
 			storeDetails.put("10.166.205.201", new HalfordsStoreDetails("10.166.205.201","791 Burnley","Anchor Retail Park,Burnley,BB11 1BS,Phone 01282 855290", "0791"));
-			storeDetails.put("10.166.205.202", new HalfordsStoreDetails("10.166.205.202","791 Burnley","Anchor Retail Park,Burnley,BB11 1BS,Phone 01282 855290", "0791"));
+	//		storeDetails.put("10.166.205.202", new HalfordsStoreDetails("10.166.205.202","791 Burnley","Anchor Retail Park,Burnley,BB11 1BS,Phone 01282 855290", "0791"));
 			storeDetails.put("10.166.205.203", new HalfordsStoreDetails("10.166.205.203","791 Burnley","Anchor Retail Park,Burnley,BB11 1BS,Phone 01282 855290", "0791"));
 			storeDetails.put("10.166.205.204", new HalfordsStoreDetails("10.166.205.204","791 Burnley","Anchor Retail Park,Burnley,BB11 1BS,Phone 01282 855290", "0791"));
 			storeDetails.put("10.166.205.205", new HalfordsStoreDetails("10.166.205.205","791 Burnley","Anchor Retail Park,Burnley,BB11 1BS,Phone 01282 855290", "0791"));
@@ -12059,6 +12063,9 @@ public class HalfordsTillStatusDisplay {
 			storeDetails.put("10.66.114.31", new HalfordsStoreDetails("10.66.114.31","815 Paisley","Hamilton Street,Paisley,PA3 4BA,Phone 0141 887 8889", "0815"));
 			storeDetails.put("10.66.114.32", new HalfordsStoreDetails("10.66.114.32","815 Paisley","Hamilton Street,Paisley,PA3 4BA,Phone 0141 887 8889", "0815"));
 			storeDetails.put("10.66.114.33", new HalfordsStoreDetails("10.66.114.33","815 Paisley","Hamilton Street,Paisley,PA3 4BA,Phone 0141 887 8889", "0815"));
+	//		storeDetails.put("10.166.171.211", new HalfordsStoreDetails("10.166.171.211","815 Paisley","Hamilton Street,Paisley,PA3 4BA,Phone 0141 887 8889", "0815"));
+
+			
 			storeDetails.put("10.166.114.201", new HalfordsStoreDetails("10.166.114.201","815 Paisley","Hamilton Street,Paisley,PA3 4BA,Phone 0141 887 8889", "0815"));
 			storeDetails.put("10.166.114.202", new HalfordsStoreDetails("10.166.114.202","815 Paisley","Hamilton Street,Paisley,PA3 4BA,Phone 0141 887 8889", "0815"));
 			storeDetails.put("10.166.114.203", new HalfordsStoreDetails("10.166.114.203","815 Paisley","Hamilton Street,Paisley,PA3 4BA,Phone 0141 887 8889", "0815"));
@@ -12475,7 +12482,7 @@ public class HalfordsTillStatusDisplay {
 			storeDetails.put("10.166.171.203", new HalfordsStoreDetails("10.166.171.203","887 Bedford","St. Johns Estate,Bedford,MK42 0XE,Phone 01527 914 267", "0887"));
 			storeDetails.put("10.166.171.205", new HalfordsStoreDetails("10.166.171.205","887 Bedford","St. Johns Estate,Bedford,MK42 0XE,Phone 01527 914 267", "0887"));
 			storeDetails.put("10.166.171.206", new HalfordsStoreDetails("10.166.171.206","887 Bedford","St. Johns Estate,Bedford,MK42 0XE,Phone 01527 914 267", "0887"));
-			storeDetails.put("10.166.171.211", new HalfordsStoreDetails("10.166.171.211","887 Bedford","St. Johns Estate,Bedford,MK42 0XE,Phone 01527 914 267", "0887"));
+			storeDetails.put("10.166.171.204", new HalfordsStoreDetails("10.166.171.204","887 Bedford","St. Johns Estate,Bedford,MK42 0XE,Phone 01527 914 267", "0887"));
 			storeDetails.put("10.66.227.31", new HalfordsStoreDetails("10.66.227.31","888 Chippenham","Unit 1, Hathaway Retail Park,Chippenham,SN15 1JG,Phone 01249 445040", "0888"));
 			storeDetails.put("10.66.227.32", new HalfordsStoreDetails("10.66.227.32","888 Chippenham","Unit 1, Hathaway Retail Park,Chippenham,SN15 1JG,Phone 01249 445040", "0888"));
 			storeDetails.put("10.66.227.33", new HalfordsStoreDetails("10.66.227.33","888 Chippenham","Unit 1, Hathaway Retail Park,Chippenham,SN15 1JG,Phone 01249 445040", "0888"));
@@ -12615,7 +12622,7 @@ public class HalfordsTillStatusDisplay {
 			storeDetails.put("10.66.180.33", new HalfordsStoreDetails("10.66.180.33","591 Eastleigh","Unit 3, Woodside Avenue,Eastleigh,SO50 9NA,Phone:02380 629655", "0591"));
 			storeDetails.put("10.166.180.201", new HalfordsStoreDetails("10.166.180.201","591 Eastleigh","Unit 3, Woodside Avenue,Eastleigh,SO50 9NA,Phone:02380 629655", "0591"));
 			storeDetails.put("10.166.180.202", new HalfordsStoreDetails("10.166.180.202","591 Eastleigh","Unit 3, Woodside Avenue,Eastleigh,SO50 9NA,Phone:02380 629655", "0591"));
-			storeDetails.put("10.166.180.203", new HalfordsStoreDetails("10.166.180.203","591 Eastleigh","Unit 3, Woodside Avenue,Eastleigh,SO50 9NA,Phone:02380 629655", "0591"));
+		//	storeDetails.put("10.166.180.203", new HalfordsStoreDetails("10.166.180.203","591 Eastleigh","Unit 3, Woodside Avenue,Eastleigh,SO50 9NA,Phone:02380 629655", "0591"));
 			storeDetails.put("10.166.180.204", new HalfordsStoreDetails("10.166.180.204","591 Eastleigh","Unit 3, Woodside Avenue,Eastleigh,SO50 9NA,Phone:02380 629655", "0591"));
 			storeDetails.put("10.166.180.205", new HalfordsStoreDetails("10.166.180.205","591 Eastleigh","Unit 3, Woodside Avenue,Eastleigh,SO50 9NA,Phone:02380 629655", "0591"));
 			storeDetails.put("10.66.99.31", new HalfordsStoreDetails("10.66.99.31","596 Ashton Under Lyme","Unit 7, Snipe Retail Park,Ashton-under-Lyne,OL7 0DN,Phone:0161 371 9739", "0596"));
@@ -12975,7 +12982,7 @@ public class HalfordsTillStatusDisplay {
 			storeDetails.put("10.166.4.202", new HalfordsStoreDetails("10.166.4.202","799 Redditch","Redditch Ringway,Redditch,B98 8DU,Phone 01527 584488", "0799"));
 			storeDetails.put("10.166.4.203", new HalfordsStoreDetails("10.166.4.203","799 Redditch","Redditch Ringway,Redditch,B98 8DU,Phone 01527 584488", "0799"));
 			storeDetails.put("10.166.4.204", new HalfordsStoreDetails("10.166.4.204","799 Redditch","Redditch Ringway,Redditch,B98 8DU,Phone 01527 584488", "0799"));
-			storeDetails.put("10.166.4.205", new HalfordsStoreDetails("10.166.4.205","799 Redditch","Redditch Ringway,Redditch,B98 8DU,Phone 01527 584488", "0799"));
+	//		storeDetails.put("10.166.4.205", new HalfordsStoreDetails("10.166.4.205","799 Redditch","Redditch Ringway,Redditch,B98 8DU,Phone 01527 584488", "0799"));
 			storeDetails.put("10.66.203.31", new HalfordsStoreDetails("10.66.203.31","588 Chesterfield","Unit 4, Netto Retail Park,Chesterfield,S41 8JZ,Phone:01246 559897", "0588"));
 			storeDetails.put("10.66.203.32", new HalfordsStoreDetails("10.66.203.32","588 Chesterfield","Unit 4, Netto Retail Park,Chesterfield,S41 8JZ,Phone:01246 559897", "0588"));
 			storeDetails.put("10.66.203.33", new HalfordsStoreDetails("10.66.203.33","588 Chesterfield","Unit 4, Netto Retail Park,Chesterfield,S41 8JZ,Phone:01246 559897", "0588"));
@@ -12993,7 +13000,7 @@ public class HalfordsTillStatusDisplay {
 			storeDetails.put("10.66.191.32", new HalfordsStoreDetails("10.66.191.32","797 Bristol Eastgate","Eastgate Centre,Bristol,BS5 6XX,Phone 0117 9354041", "0797"));
 			storeDetails.put("10.66.191.33", new HalfordsStoreDetails("10.66.191.33","797 Bristol Eastgate","Eastgate Centre,Bristol,BS5 6XX,Phone 0117 9354041", "0797"));
 			storeDetails.put("10.166.191.201", new HalfordsStoreDetails("10.166.191.201","797 Bristol Eastgate","Eastgate Centre,Bristol,BS5 6XX,Phone 0117 9354041", "0797"));
-			storeDetails.put("10.166.191.204", new HalfordsStoreDetails("10.166.191.204","797 Bristol Eastgate","Eastgate Centre,Bristol,BS5 6XX,Phone 0117 9354041", "0797"));
+	//		storeDetails.put("10.166.191.204", new HalfordsStoreDetails("10.166.191.204","797 Bristol Eastgate","Eastgate Centre,Bristol,BS5 6XX,Phone 0117 9354041", "0797"));
 			storeDetails.put("10.166.191.205", new HalfordsStoreDetails("10.166.191.205","797 Bristol Eastgate","Eastgate Centre,Bristol,BS5 6XX,Phone 0117 9354041", "0797"));
 			storeDetails.put("10.166.191.206", new HalfordsStoreDetails("10.166.191.206","797 Bristol Eastgate","Eastgate Centre,Bristol,BS5 6XX,Phone 0117 9354041", "0797"));
 			storeDetails.put("10.68.33.31", new HalfordsStoreDetails("10.68.33.31","342 Arbroath","Unit 2, Westway Retail Park,Arbroath,DD11 2PT ,Phone:01241 432 910", "0342"));
@@ -13009,11 +13016,12 @@ public class HalfordsTillStatusDisplay {
 			storeDetails.put("10.166.75.204", new HalfordsStoreDetails("10.166.75.204","883 Ipswich London Road","Unit 4, Suffolk Retail Park,Ipswich,IP1 2EJ,Phone 01473 288880", "0883"));
 			storeDetails.put("10.166.75.205", new HalfordsStoreDetails("10.166.75.205","883 Ipswich London Road","Unit 4, Suffolk Retail Park,Ipswich,IP1 2EJ,Phone 01473 288880", "0883"));
 			storeDetails.put("10.66.97.31", new HalfordsStoreDetails("10.66.97.31","439 Lancaster","Unit 2, Bulk Road,Lancaster,LA1 1DT,Phone :01524 846889", "0439"));
+	//		storeDetails.put("10.166.97.203", new HalfordsStoreDetails("10.166.97.203","439 Lancaster","Unit 2, Bulk Road,Lancaster,LA1 1DT,Phone :01524 846889", "0439"));
 			storeDetails.put("10.66.97.32", new HalfordsStoreDetails("10.66.97.32","439 Lancaster","Unit 2, Bulk Road,Lancaster,LA1 1DT,Phone :01524 846889", "0439"));
 			storeDetails.put("10.66.97.33", new HalfordsStoreDetails("10.66.97.33","439 Lancaster","Unit 2, Bulk Road,Lancaster,LA1 1DT,Phone :01524 846889", "0439"));
 			storeDetails.put("10.166.97.201", new HalfordsStoreDetails("10.166.97.201","439 Lancaster","Unit 2, Bulk Road,Lancaster,LA1 1DT,Phone :01524 846889", "0439"));
 			storeDetails.put("10.166.97.202", new HalfordsStoreDetails("10.166.97.202","439 Lancaster","Unit 2, Bulk Road,Lancaster,LA1 1DT,Phone :01524 846889", "0439"));
-			storeDetails.put("10.166.97.203", new HalfordsStoreDetails("10.166.97.203","439 Lancaster","Unit 2, Bulk Road,Lancaster,LA1 1DT,Phone :01524 846889", "0439"));
+			storeDetails.put("10.166.97.204", new HalfordsStoreDetails("10.166.97.204","439 Lancaster","Unit 2, Bulk Road,Lancaster,LA1 1DT,Phone :01524 846889", "0439"));
 			storeDetails.put("10.166.97.205", new HalfordsStoreDetails("10.166.97.205","439 Lancaster","Unit 2, Bulk Road,Lancaster,LA1 1DT,Phone :01524 846889", "0439"));
 			storeDetails.put("10.67.227.31", new HalfordsStoreDetails("10.67.227.31","358 Chiswick","512-518, Chiswick High Road,Chiswick,W4 5RG,Phone:0208 7476110", "0358"));
 			storeDetails.put("10.67.227.32", new HalfordsStoreDetails("10.67.227.32","358 Chiswick","512-518, Chiswick High Road,Chiswick,W4 5RG,Phone:0208 7476110", "0358"));
