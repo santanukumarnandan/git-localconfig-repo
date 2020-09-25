@@ -74,7 +74,8 @@ public class HalfordsFixedTillStatus {
 			String storeNumber = (String) mapElement.getKey();
 			FixedTillBean fixedTillDetails = ((FixedTillBean) mapElement.getValue());
 
-			InetAddress geek1 = InetAddress.getByName(storeNumber);
+			String ipaddress = fixedTillDetails.getFixedTillIpAddress();
+			InetAddress geek1 = InetAddress.getByName(ipaddress);
 			geek1.getHostAddress();
 			geek1.getHostName();
 			// System.out.println("Sending Ping Request to " + ipAddress);
@@ -99,7 +100,8 @@ public class HalfordsFixedTillStatus {
 			String storeNumber = (String) mapElement.getKey();
 			FixedTillBean fixedTillDetails = ((FixedTillBean) mapElement.getValue());
 
-			InetAddress geek1 = InetAddress.getByName(storeNumber);
+			String ipaddress = fixedTillDetails.getFixedTillIpAddress();
+			InetAddress geek1 = InetAddress.getByName(ipaddress);			
 			geek1.getHostAddress();
 			geek1.getHostName();
 			// System.out.println("Sending Ping Request to " + ipAddress);
@@ -123,7 +125,7 @@ public class HalfordsFixedTillStatus {
 		// values of down tills
 		for (Entry<String, FixedTillBean> mapElement : fixedTillAttributesSecondtMap.entrySet()) {
 			for (Entry<String, FixedTillBean> mapElement1 : fixedTillAttributesFirstMap.entrySet()) {
-				if (mapElement.getValue().equals(mapElement1.getValue())) {
+				if (mapElement.getValue().getFixedTillStoreNumber().equals(mapElement1.getValue().getFixedTillStoreNumber())) {
 
 					String storeNumber = (String) mapElement.getKey();
 					FixedTillBean fixedTillDetails = ((FixedTillBean) mapElement.getValue());
@@ -147,7 +149,8 @@ public class HalfordsFixedTillStatus {
 			String storeNumber = (String) mapElement.getKey();
 			FixedTillBean fixedTillDetails = ((FixedTillBean) mapElement.getValue());
 
-			InetAddress geek1 = InetAddress.getByName(storeNumber);
+			String ipaddress = fixedTillDetails.getFixedTillIpAddress();
+			InetAddress geek1 = InetAddress.getByName(ipaddress);			
 			geek1.getHostAddress();
 			geek1.getHostName();
 			// System.out.println("Sending Ping Request to " + ipAddress);
@@ -171,7 +174,7 @@ public class HalfordsFixedTillStatus {
 		// values of down tills
 		for (Entry<String, FixedTillBean> mapElement : hhtAttributesThirdtMap.entrySet()) {
 			for (Entry<String, FixedTillBean> mapElement1 : hhtAttributesFourthtMap.entrySet()) {
-				if (mapElement.getValue().equals(mapElement1.getValue())) {
+				if (mapElement.getValue().getFixedTillStoreNumber().equals(mapElement1.getValue().getFixedTillStoreNumber())) {
 
 					String storeNumber = (String) mapElement.getKey();
 					FixedTillBean fixedTillDetails = ((FixedTillBean) mapElement.getValue());
@@ -195,7 +198,8 @@ public class HalfordsFixedTillStatus {
 			String storeNumber = (String) mapElement.getKey();
 			FixedTillBean fixedTillDetails = ((FixedTillBean) mapElement.getValue());
 
-			InetAddress geek1 = InetAddress.getByName(storeNumber);
+			String ipaddress = fixedTillDetails.getFixedTillIpAddress();
+			InetAddress geek1 = InetAddress.getByName(ipaddress);			
 			geek1.getHostAddress();
 			geek1.getHostName();
 			// System.out.println("Sending Ping Request to " + ipAddress);
@@ -219,7 +223,7 @@ public class HalfordsFixedTillStatus {
 		// values of down tills
 		for (Entry<String, FixedTillBean> mapElement : hhtAttributesFifthtMap.entrySet()) {
 			for (Entry<String, FixedTillBean> mapElement1 : hhtAttributesSixthtMap.entrySet()) {
-				if (mapElement.getValue().equals(mapElement1.getValue())) {
+				if (mapElement.getValue().getFixedTillStoreNumber().equals(mapElement1.getValue().getFixedTillStoreNumber())) {
 
 					String storeNumber = (String) mapElement.getKey();
 					FixedTillBean fixedTillDetails = ((FixedTillBean) mapElement.getValue());
@@ -243,7 +247,8 @@ public class HalfordsFixedTillStatus {
 			String storeNumber = (String) mapElement.getKey();
 			FixedTillBean fixedTillDetails = ((FixedTillBean) mapElement.getValue());
 
-			InetAddress geek1 = InetAddress.getByName(storeNumber);
+			String ipaddress = fixedTillDetails.getFixedTillIpAddress();
+			InetAddress geek1 = InetAddress.getByName(ipaddress);			
 			geek1.getHostAddress();
 			geek1.getHostName();
 			// System.out.println("Sending Ping Request to " + ipAddress);
@@ -267,7 +272,7 @@ public class HalfordsFixedTillStatus {
 		// values of down tills
 		for (Entry<String, FixedTillBean> mapElement : hhtAttributesSeventhMap.entrySet()) {
 			for (Entry<String, FixedTillBean> mapElement1 : hhtAttributesEightMap.entrySet()) {
-				if (mapElement.getValue().equals(mapElement1.getValue())) {
+				if (mapElement.getValue().getFixedTillStoreNumber().equals(mapElement1.getValue().getFixedTillStoreNumber())) {
 
 					String storeNumber = (String) mapElement.getKey();
 					FixedTillBean fixedTillDetails = ((FixedTillBean) mapElement.getValue());
@@ -291,7 +296,8 @@ public class HalfordsFixedTillStatus {
 			String storeNumber = (String) mapElement.getKey();
 			FixedTillBean fixedTillDetails = ((FixedTillBean) mapElement.getValue());
 
-			InetAddress geek1 = InetAddress.getByName(storeNumber);
+			String ipaddress = fixedTillDetails.getFixedTillIpAddress();
+			InetAddress geek1 = InetAddress.getByName(ipaddress);			
 			geek1.getHostAddress();
 			geek1.getHostName();
 			// System.out.println("Sending Ping Request to " + ipAddress);
@@ -315,7 +321,7 @@ public class HalfordsFixedTillStatus {
 		// values of down tills
 		for (Entry<String, FixedTillBean> mapElement : hhtAttributesNnthMap.entrySet()) {
 			for (Entry<String, FixedTillBean> mapElement1 : hhtAttributesTenthMap.entrySet()) {
-				if (mapElement.getValue().equals(mapElement1.getValue())) {
+				if (mapElement.getValue().getFixedTillStoreNumber().equals(mapElement1.getValue().getFixedTillStoreNumber())) {
 
 					String storeNumber = (String) mapElement.getKey();
 					FixedTillBean fixedTillDetails = ((FixedTillBean) mapElement.getValue());
@@ -341,7 +347,8 @@ public class HalfordsFixedTillStatus {
 			String storeNumber = (String) mapElement.getKey();
 			FixedTillBean fixedTillDetails = ((FixedTillBean) mapElement.getValue());
 
-			InetAddress geek1 = InetAddress.getByName(storeNumber);
+			String ipaddress = fixedTillDetails.getFixedTillIpAddress();
+			InetAddress geek1 = InetAddress.getByName(ipaddress);			
 			geek1.getHostAddress();
 			geek1.getHostName();
 			// System.out.println("Sending Ping Request to " + ipAddress);
@@ -365,7 +372,7 @@ public class HalfordsFixedTillStatus {
 		// common values of down tills
 		for (Entry<String, FixedTillBean> mapElement : hhtAttributesEleventhMap.entrySet()) {
 			for (Entry<String, FixedTillBean> mapElement1 : hhtAttributesTwelvethMap.entrySet()) {
-				if (mapElement.getValue().equals(mapElement1.getValue())) {
+				if (mapElement.getValue().getFixedTillStoreNumber().equals(mapElement1.getValue().getFixedTillStoreNumber())) {
 
 					String storeNumber = (String) mapElement.getKey();
 					FixedTillBean fixedTillDetails = ((FixedTillBean) mapElement.getValue());
@@ -391,7 +398,8 @@ public class HalfordsFixedTillStatus {
 			String storeNumber = (String) mapElement.getKey();
 			FixedTillBean fixedTillDetails = ((FixedTillBean) mapElement.getValue());
 
-			InetAddress geek1 = InetAddress.getByName(storeNumber);
+			String ipaddress = fixedTillDetails.getFixedTillIpAddress();
+			InetAddress geek1 = InetAddress.getByName(ipaddress);			
 			geek1.getHostAddress();
 			geek1.getHostName();
 			// System.out.println("Sending Ping Request to " + ipAddress);
@@ -415,7 +423,7 @@ public class HalfordsFixedTillStatus {
 		// common values of down tills
 		for (Entry<String, FixedTillBean> mapElement : hhtAttributesThirteenthMap.entrySet()) {
 			for (Entry<String, FixedTillBean> mapElement1 : hhtAttributesFourteenthMap.entrySet()) {
-				if (mapElement.getValue().equals(mapElement1.getValue())) {
+				if (mapElement.getValue().getFixedTillStoreNumber().equals(mapElement1.getValue().getFixedTillStoreNumber())) {
 
 					String storeNumber = (String) mapElement.getKey();
 					FixedTillBean fixedTillDetails = ((FixedTillBean) mapElement.getValue());

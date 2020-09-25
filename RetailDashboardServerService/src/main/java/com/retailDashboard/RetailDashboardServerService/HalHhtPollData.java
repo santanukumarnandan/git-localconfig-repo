@@ -13,7 +13,7 @@ import javax.persistence.Table;
 public class HalHhtPollData {
 
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "Record_Number")
 	private Long recordNumber;
 
@@ -29,7 +29,7 @@ public class HalHhtPollData {
 	@Column(name = "Polling_Time")
 	private String pollingTime;
 
-	@Column(name = "Polliing_Number")
+	@Column(name = "Polling_Number")
 	private String pollingNumber;
 
 	@Column(name = "Date_Up")

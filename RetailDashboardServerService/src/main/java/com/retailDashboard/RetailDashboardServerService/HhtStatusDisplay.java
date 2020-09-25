@@ -70,7 +70,8 @@ public class HhtStatusDisplay {
 			String ipAddress = (String) mapElement.getKey();
 			HHTAttributeBean hhtDetails = ((HHTAttributeBean) mapElement.getValue());
 
-			InetAddress geek1 = InetAddress.getByName(ipAddress);
+			String ipaddress = hhtDetails.getHhtIpAddress();
+			InetAddress geek1 = InetAddress.getByName(ipaddress);
 			geek1.getHostAddress();
 			geek1.getHostName();
 			// System.out.println("Sending Ping Request to " + ipAddress);
@@ -95,7 +96,8 @@ public class HhtStatusDisplay {
 			String ipAddress = (String) mapElement.getKey();
 			HHTAttributeBean hhtDetails = ((HHTAttributeBean) mapElement.getValue());
 
-			InetAddress geek1 = InetAddress.getByName(ipAddress);
+			String ipaddress = hhtDetails.getHhtIpAddress();
+			InetAddress geek1 = InetAddress.getByName(ipaddress);			
 			geek1.getHostAddress();
 			geek1.getHostName();
 			// System.out.println("Sending Ping Request to " + ipAddress);
@@ -118,7 +120,7 @@ public class HhtStatusDisplay {
 
 		for (Entry<String, HHTAttributeBean> mapElement : hhtAttributesSecondtMap.entrySet()) {
 			for (Entry<String, HHTAttributeBean> mapElement1 : hhtAttributesparentMap.entrySet()) {
-				if (mapElement.getValue().equals(mapElement1.getValue())) {
+				if (mapElement.getValue().getHhtStoreNumber().equals(mapElement1.getValue().getHhtStoreNumber())) {
 
 					String ipAddress = (String) mapElement.getKey();
 					HHTAttributeBean hhtDetails = ((HHTAttributeBean) mapElement.getValue());
@@ -143,7 +145,8 @@ public class HhtStatusDisplay {
 			String ipAddress = (String) mapElement.getKey();
 			HHTAttributeBean hhtDetails = ((HHTAttributeBean) mapElement.getValue());
 
-			InetAddress geek1 = InetAddress.getByName(ipAddress);
+			String ipaddress = hhtDetails.getHhtIpAddress();
+			InetAddress geek1 = InetAddress.getByName(ipaddress);
 			geek1.getHostAddress();
 			geek1.getHostName();
 			// System.out.println("Sending Ping Request to " + ipAddress);
@@ -169,7 +172,7 @@ public class HhtStatusDisplay {
 
 		for (Entry<String, HHTAttributeBean> mapElement : hhtAttributesThirdtMap.entrySet()) {
 			for (Entry<String, HHTAttributeBean> mapElement1 : hhtAttributesFourthtMap.entrySet()) {
-				if (mapElement.getValue().equals(mapElement1.getValue())) {
+				if (mapElement.getValue().getHhtStoreNumber().equals(mapElement1.getValue().getHhtStoreNumber())) {
 
 					String ipAddress = (String) mapElement.getKey();
 					HHTAttributeBean hhtDetails = ((HHTAttributeBean) mapElement.getValue());
@@ -194,7 +197,8 @@ public class HhtStatusDisplay {
 			String ipAddress = (String) mapElement.getKey();
 			HHTAttributeBean hhtDetails = ((HHTAttributeBean) mapElement.getValue());
 
-			InetAddress geek1 = InetAddress.getByName(ipAddress);
+			String ipaddress = hhtDetails.getHhtIpAddress();
+			InetAddress geek1 = InetAddress.getByName(ipaddress);
 			geek1.getHostAddress();
 			geek1.getHostName();
 			// System.out.println("Sending Ping Request to " + ipAddress);
@@ -220,7 +224,7 @@ public class HhtStatusDisplay {
 
 		for (Entry<String, HHTAttributeBean> mapElement : hhtAttributesFifthtMap.entrySet()) {
 			for (Entry<String, HHTAttributeBean> mapElement1 : hhtAttributesSixthtMap.entrySet()) {
-				if (mapElement.getValue().equals(mapElement1.getValue())) {
+				if (mapElement.getValue().getHhtStoreNumber().equals(mapElement1.getValue().getHhtStoreNumber())) {
 
 					String ipAddress = (String) mapElement.getKey();
 					HHTAttributeBean hhtDetails = ((HHTAttributeBean) mapElement.getValue());
@@ -245,7 +249,8 @@ public class HhtStatusDisplay {
 			String ipAddress = (String) mapElement.getKey();
 			HHTAttributeBean hhtDetails = ((HHTAttributeBean) mapElement.getValue());
 
-			InetAddress geek1 = InetAddress.getByName(ipAddress);
+			String ipaddress = hhtDetails.getHhtIpAddress();
+			InetAddress geek1 = InetAddress.getByName(ipaddress);
 			geek1.getHostAddress();
 			geek1.getHostName();
 			// System.out.println("Sending Ping Request to " + ipAddress);
@@ -269,7 +274,7 @@ public class HhtStatusDisplay {
 
 		for (Entry<String, HHTAttributeBean> mapElement : hhtAttributesSeventhMap.entrySet()) {
 			for (Entry<String, HHTAttributeBean> mapElement1 : hhtAttributesEightMap.entrySet()) {
-				if (mapElement.getValue().equals(mapElement1.getValue())) {
+				if (mapElement.getValue().getHhtStoreNumber().equals(mapElement1.getValue().getHhtStoreNumber())) {
 
 					String ipAddress = (String) mapElement.getKey();
 					HHTAttributeBean hhtDetails = ((HHTAttributeBean) mapElement.getValue());
@@ -294,7 +299,8 @@ public class HhtStatusDisplay {
 			String ipAddress = (String) mapElement.getKey();
 			HHTAttributeBean hhtDetails = ((HHTAttributeBean) mapElement.getValue());
 
-			InetAddress geek1 = InetAddress.getByName(ipAddress);
+			String ipaddress = hhtDetails.getHhtIpAddress();
+			InetAddress geek1 = InetAddress.getByName(ipaddress);
 			geek1.getHostAddress();
 			geek1.getHostName();
 			// System.out.println("Sending Ping Request to " + ipAddress);
@@ -320,7 +326,7 @@ public class HhtStatusDisplay {
 
 		for (Entry<String, HHTAttributeBean> mapElement : hhtAttributesNnthMap.entrySet()) {
 			for (Entry<String, HHTAttributeBean> mapElement1 : hhtAttributesTenthMap.entrySet()) {
-				if (mapElement.getValue().equals(mapElement1.getValue())) {
+				if (mapElement.getValue().getHhtStoreNumber().equals(mapElement1.getValue().getHhtStoreNumber())) {
 
 					String ipAddress = (String) mapElement.getKey();
 					HHTAttributeBean hhtDetails = ((HHTAttributeBean) mapElement.getValue());
@@ -346,7 +352,8 @@ public class HhtStatusDisplay {
 			String ipAddress = (String) mapElement.getKey();
 			HHTAttributeBean hhtDetails = ((HHTAttributeBean) mapElement.getValue());
 
-			InetAddress geek1 = InetAddress.getByName(ipAddress);
+			String ipaddress = hhtDetails.getHhtIpAddress();
+			InetAddress geek1 = InetAddress.getByName(ipaddress);
 			geek1.getHostAddress();
 			geek1.getHostName();
 			// System.out.println("Sending Ping Request to " + ipAddress);
@@ -372,7 +379,7 @@ public class HhtStatusDisplay {
 
 		for (Entry<String, HHTAttributeBean> mapElement : hhtAttributesEleventhMap.entrySet()) {
 			for (Entry<String, HHTAttributeBean> mapElement1 : hhtAttributesTwelvethMap.entrySet()) {
-				if (mapElement.getValue().equals(mapElement1.getValue())) {
+				if (mapElement.getValue().getHhtStoreNumber().equals(mapElement1.getValue().getHhtStoreNumber())) {
 
 					String ipAddress = (String) mapElement.getKey();
 					HHTAttributeBean hhtDetails = ((HHTAttributeBean) mapElement.getValue());
@@ -397,7 +404,8 @@ public class HhtStatusDisplay {
 			String ipAddress = (String) mapElement.getKey();
 			HHTAttributeBean hhtDetails = ((HHTAttributeBean) mapElement.getValue());
 
-			InetAddress geek1 = InetAddress.getByName(ipAddress);
+			String ipaddress = hhtDetails.getHhtIpAddress();
+			InetAddress geek1 = InetAddress.getByName(ipaddress);
 			geek1.getHostAddress();
 			geek1.getHostName();
 			// System.out.println("Sending Ping Request to " + ipAddress);
@@ -423,7 +431,7 @@ public class HhtStatusDisplay {
 
 		for (Entry<String, HHTAttributeBean> mapElement : hhtAttributesThirteenthMap.entrySet()) {
 			for (Entry<String, HHTAttributeBean> mapElement1 : hhtAttributesFourteenthMap.entrySet()) {
-				if (mapElement.getValue().equals(mapElement1.getValue())) {
+				if (mapElement.getValue().getHhtStoreNumber().equals(mapElement1.getValue().getHhtStoreNumber())) {
 
 					String ipAddress = (String) mapElement.getKey();
 					HHTAttributeBean hhtDetails = ((HHTAttributeBean) mapElement.getValue());

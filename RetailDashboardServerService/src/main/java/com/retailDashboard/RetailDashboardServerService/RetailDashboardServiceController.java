@@ -24,25 +24,25 @@ public class RetailDashboardServiceController {
 //	@Autowired
 //	private RetailDashboardServiceProxy retailDashboardServiceProxy;
 //	
-	@Autowired
+	
 	public HhtStatusDisplay hhtStatusDisplay;
 
-	@Autowired
+	
 	public HalfordsFixedTillStatus fixedTillStatusDisplay;
 
-	@Autowired
+	
 	public PrinterStatusDisplay printerStatusDisplay;
 
-	@Autowired
+	
 	private PedStatusDisplay pedStatusDisplay;
 
-	@Autowired
+	
 	private TabletStatusDisplay tabletStatusDisplay;
 
-	@Autowired
+
 	private PhoneStatusDisplay phoneStatusDisplay;
 
-	@Autowired
+	
 	private WifiAccessPointStatus wifiAccessPointStatus;
 
 	@Autowired
@@ -138,8 +138,8 @@ public class RetailDashboardServiceController {
 		
 		// For first time there will be no data in hal fixed till master table. So we need to take the ip for till from hal store master table and extarct the till ip and add to repository 
 		List<HalFixedTillMaster> firstTimeList = new ArrayList<HalFixedTillMaster>();
-		HalFixedTillMaster halFixedTillMaster = new HalFixedTillMaster();
 		for (HalStoreMaster halStoreMaster : storeMasterList1) {
+			HalFixedTillMaster halFixedTillMaster = new HalFixedTillMaster();
 			storeNumbers.add(halStoreMaster.getStoreNumber());
 			ipRanges.add(halStoreMaster.getIpRangeTill());
 			halFixedTillMaster.setStoreIpAddress(halStoreMaster.getIpRangeTill());
@@ -195,8 +195,8 @@ public class RetailDashboardServiceController {
 		// HalFixedTillPollData
 
 		List<HalFixedTillPollData> fixedTillPollDataTobeupdated = new ArrayList<HalFixedTillPollData>();
-		HalFixedTillPollData halFixedTillPollData = new HalFixedTillPollData();
 		for (FixedTillBean fixedTillBean2 : fixedTillBean) {
+			HalFixedTillPollData halFixedTillPollData = new HalFixedTillPollData();
 			halFixedTillPollData.setDateUp(fixedTillBean2.getFixedTillDateUp());
 			halFixedTillPollData.setDownSince(fixedTillBean2.getFixedTillDownSince());
 			halFixedTillPollData.setPollingDate(new Date().toString());
@@ -204,6 +204,7 @@ public class RetailDashboardServiceController {
 			halFixedTillPollData.setPollingTime(LocalDateTime.now().toString());
 			halFixedTillPollData.setStoreIpAddress(fixedTillBean2.getFixedTillIpAddress());
 			halFixedTillPollData.setTimeUp(fixedTillBean2.getFixedTillTimeUp());
+			halFixedTillPollData.setStroreNumber(fixedTillBean2.getFixedTillStoreNumber());
 			fixedTillPollDataTobeupdated.add(halFixedTillPollData);
 		}
 

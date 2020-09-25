@@ -13,7 +13,7 @@ import javax.persistence.Table;
 public class HalPhonePollData {
 
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "Record_Number")
 	private Long recordNumber;
 
