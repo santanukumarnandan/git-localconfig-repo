@@ -40,14 +40,14 @@
       <groupId>org.springframework.boot</groupId>  
       <artifactId>spring-boot-starter-data-jpa</artifactId> 
     </dependency>  
-    <dependency> 
+    <!-- <dependency> 
       <groupId>org.springframework.cloud</groupId>  
       <artifactId>spring-cloud-starter-netflix-ribbon</artifactId> 
     </dependency>  
     <dependency> 
       <groupId>org.springframework.cloud</groupId>  
       <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId> 
-    </dependency>  
+    </dependency> -->  
     <dependency> 
       <groupId>org.springframework.cloud</groupId>  
       <artifactId>spring-cloud-starter-sleuth</artifactId> 
@@ -102,10 +102,10 @@
         <version>1.7.0</version>  
         <configuration>
           <schemaVersion>V2</schemaVersion>
-          <resourceGroup>RetailDashboardServerService-rg</resourceGroup>
-          <appName>RetailDashboardServerService-halretaildashboard</appName>
+          <resourceGroup>HALFORDS-TCS-SANDBOX</resourceGroup>
+          <appName>HalfordsRetailDashboard</appName>
           <pricingTier>B1</pricingTier>
-          <region>westeurope</region>
+          <region>UK South</region>
           <appSettings>
           <property>  
    			<name>JAVA_OPTS</name>       

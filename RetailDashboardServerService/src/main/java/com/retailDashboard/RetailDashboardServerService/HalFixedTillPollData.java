@@ -28,7 +28,7 @@ public class HalFixedTillPollData {
 	@Column(name = "Polling_Time")
 	private String pollingTime;
 
-	@Column(name = "Polling_Number")
+	@Column(name = "Polliing_Number")
 	private String pollingNumber;
 
 	@Column(name = "Date_Up")
