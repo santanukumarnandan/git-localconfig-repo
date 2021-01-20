@@ -14,6 +14,7 @@ import org.springframework.cache.annotation.Caching;
 import org.springframework.http.MediaType;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.web.HttpMediaTypeNotAcceptableException;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -44,7 +45,8 @@ public class TillStatusRestApi {
     // http://localhost:8080/SomeContextPath/hallfordsTillStatusAttributes
     // http://localhost:8080/SomeContextPath/hallfordsTillStatusAttributes.xml
     // http://localhost:8080/SomeContextPath/hallfordsTillStatusAttributes.json
-    @RequestMapping(value = "/hallfordsTillStatusAttributes", //
+	@CrossOrigin(origins = "http://localhost:8080")
+	@RequestMapping(value = "/hallfordsTillStatusAttributes", //
             method = RequestMethod.GET, //
             produces = { MediaType.APPLICATION_JSON_VALUE, //
                     MediaType.APPLICATION_XML_VALUE })
