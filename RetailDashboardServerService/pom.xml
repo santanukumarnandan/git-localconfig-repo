@@ -103,9 +103,9 @@
         <configuration>
           <schemaVersion>V2</schemaVersion>
           <resourceGroup>HALFORDS-TCS-SANDBOX</resourceGroup>
-          <appName>HalfordsRetailDashboard</appName>
+          <appName>HalfordsRetailDashboardWebAppService</appName>
           <pricingTier>B1</pricingTier>
-          <region>UK South</region>
+          <region>UK West</region>
           <appSettings>
           <property>  
    			<name>JAVA_OPTS</name>       
